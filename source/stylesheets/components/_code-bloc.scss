@@ -1,0 +1,140 @@
+.row.editor {
+  max-width: 1400px;
+}
+
+.code-bloc {
+  border-radius: 4px;
+  display: block;
+  float: left;
+  width: 100%;
+
+  pre[class*="language-"] {
+    margin: 0;
+    padding: 0em;
+    background: transparent;
+
+    code {
+      display: block;
+      width: calc(100% - 2em);
+      height: 100%;
+      padding: 1em;
+      float: left;
+    }
+  }
+
+  .playground &{
+    background: $al-blue-mezzo-dark;
+    color: #fff;
+
+    pre{
+      margin: 0;
+    }
+
+    pre[class*="language-"] {
+      margin: 0;
+
+      code {
+        padding: 0em;
+        display: block;
+        width: calc(100% - 2em);
+        height: 100%;
+      }
+    }
+
+    textarea {
+      tab-size: 13px
+    }
+  }
+}
+
+pre {
+  background: rgba($al-black, 0.45);
+  float: left;
+  width: 100%;
+  border-radius: 4px;
+
+  .playground &{
+    padding: 1em;
+    margin: 1em 0 0px;
+  }
+
+  &.half {
+    float: left;
+    width: calc(50% - 8px);
+    margin-right: 8px;
+  }
+  code {
+    color: $pale-grey;
+    outline: none;
+    padding: 1em;
+    display: block;
+  }
+
+  .param {
+    color: orange;
+    .demo-container &{
+      color: rgba(white, 0.5);
+    }
+  }
+  .include {
+    color: rgba(white, 0.5);
+  }
+
+  .comment {
+    color: $al-blue-mezzo-light;
+  }
+  .num {
+    color: $al-pink-dark;
+    padding: 0 0.25em;
+
+    &:not(.no-edit) {
+      border-bottom: 1px dotted rgba($al-pink-dark, 0.6);
+    }
+    &:active,
+    &:focus {
+      animation: color 1s steps(1, end) infinite;
+      outline: none;
+      background: $al-pink-dark;
+      color: #fff;
+    }
+  }
+
+  &.half {
+    &+ .half {
+      width: calc(50% - 8px);
+      margin-left: 0;
+    }
+  }
+}
+
+#sass,
+#css {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  color: #eee;
+  overflow: hidden;
+  display: block;
+  padding-right: 16px;
+}
+
+#css {
+  overflow: auto;
+}
+
+.code-bloc {
+  .bloc {
+    z-index: 100;
+    width: 50%;
+    height: 500px;
+    float:left;
+    overflow-x: hidden
+  }
+}
+
+@keyframes color {
+  50% {
+    color: rgba($al-pink-dark, 0.25);
+  }
+}
+

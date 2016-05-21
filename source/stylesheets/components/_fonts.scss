@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'OpenSans100';
+  src: url('../fonts/OpenSans-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'OpenSans200';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'OpenSans300';
+  src: url('../fonts/OpenSans-Semibold.ttf') format('truetype')
+}
+
+
+body {
+  font-family: 'OpenSans200';
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-size: 22px;
+  text-transform: capitalize;
+  color: rgba(white, 0.8)
+}
+p {
+  letter-spacing: 0.15rem;
+}
+
+strong {
+  font-weight: bold;
+  font-family: 'OpenSans300'
+}
+
+.title {
+  padding-bottom: 0.34em;
+  border-bottom: 3px solid $al-blue-light;
+}

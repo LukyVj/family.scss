@@ -1,0 +1,32 @@
+%section.usage
+  .row
+    %p Each and every mixin is really easy to use, proceed like this :
+    %span.code-bloc
+      %pre.half
+        %code
+          :preserve
+            ul li {
+              <span class="param">background</span>: <span class="value">blue</span>;
+
+             <span class="include"> @include</span> first(<span class="num" contenteditable >3</span>) {
+              <span class="param">  background</span>: <span class="num">red</span>
+              }
+            }
+      %pre.half
+        %code
+          :preserve
+            ul li {
+              <span class="param">background</span>: <span class="num">blue</span>;
+            }
+
+            ul li:nth-child(<span class="num">1</span>) {
+             <span class="param"> background</span>: <span class="num">red</span>
+
+
+            ul li:nth-child(<span class="num">2</span>) {
+              <span class="param">background</span>: <span class="num">red</span>
+
+
+            ul li:nth-child(<span class="num">3</span>) {
+              <span class="param">background</span>: <span class="num">red</span>
+            }

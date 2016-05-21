@@ -1,0 +1,38 @@
+@keyframes logo-animation {
+  50% {
+    background:  rgba($al-pink-light, 1);
+  }
+
+}
+
+
+@keyframes pulse {
+  0%{
+    // box-shadow:0 0 0 0 rgba(251,54,110,0.4)
+    outline: 1px solid rgba($al-blue-light, 1);
+    outline-offset: 0px
+  }
+  30%{
+    // box-shadow:0 0 0 30px rgba(251,54,110,0)
+    outline: 1px solid rgba($al-blue-light, 0.7);
+    outline-offset: 10px
+  }
+  60%{
+    // box-shadow:0 0 0 0 rgba(251,54,110,0)
+    outline: 1px solid rgba($al-blue-light, 0);
+    outline-offset: 20px
+  }
+
+  100% {
+     // box-shadow:0 0 0 0 rgba(251,54,110,0)
+    outline: 1px solid rgba($al-blue-light, 0);
+    outline-offset: 60px
+  }
+}
+
+
+@keyframes blink {
+  66% {
+    background: yellow;
+  }
+}

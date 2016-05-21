@@ -1,0 +1,29 @@
+.icon {
+  text-indent: -99999px;
+  color: transparent;
+  transition: background 0.2s ease;
+
+  &-love {
+    background: url($icon-heart)no-repeat center center / contain
+  }
+
+  &-love-dark {
+    background: url($icon-heart-dark)no-repeat center center / contain
+  }
+
+  &-algolia {
+    background: url($icon-algolia-dark)no-repeat center center / contain
+  }
+
+  &-algolia-light {
+    background: url($icon-algolia-light)no-repeat center bottom / contain;
+  }
+
+  &-mail {
+    background: url($icon-mail)no-repeat 8px 7px / 70%
+  }
+
+  &-algolia-small {
+    background: url($icon-algolia-small)no-repeat center center / contain
+  }
+}
