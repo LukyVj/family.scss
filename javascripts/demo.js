@@ -21,12 +21,9 @@ function first(num) {
 
 	function injectStyle(num){
 		document.querySelector('#style-first').innerHTML = `ul.first li { ${preStyle} }`;
-
-		for (var i = 0; i < num; i++) {
-			document.querySelector('#style-first').innerHTML += `.first li:nth-child(${i + 1}){
-				${selectedStyle}
-			}`;
-		}
+		document.querySelector('#style-first').innerHTML += `.first li:nth-child(-n + ${num}){
+			${selectedStyle}
+		}`;
 	}
 
 	var newStyle = injectStyle(num);
@@ -43,13 +40,9 @@ function last(num) {
 
 	function injectStyle(num){
 		document.querySelector('#style-last').innerHTML = `ul.last li { ${preStyle} }`;
-
-		for (var i = 0; i < num; i++) {
-			document.querySelector('#style-last').innerHTML += `.last li:nth-last-child(${i + 1}){
-				${selectedStyle}
-			}
-			`
-		}
+		document.querySelector('#style-first').innerHTML += `.last li:nth-last-child(-n + ${num}){
+			${selectedStyle}
+		}`;
 	}
 
 	var newStyle = injectStyle(num);
