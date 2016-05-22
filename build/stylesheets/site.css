@@ -719,43 +719,50 @@ section {
     @media (max-width: 780px) {
       /* line 10, components/_containers.scss */
       section.hero-container {
-        padding: 2em 2em; } }
-  /* line 23, components/_containers.scss */
+        padding: 2em 2em; }
+        /* line 22, components/_containers.scss */
+        section.hero-container .btn {
+          width: 100% !important;
+          max-width: 100% !important;
+          display: inline-block;
+          line-height: 1;
+          margin-bottom: 1em; } }
+  /* line 31, components/_containers.scss */
   section.search-section {
     padding: 3em 0px; }
-  /* line 26, components/_containers.scss */
+  /* line 34, components/_containers.scss */
   section.demo-container {
     background: #192449;
     padding-bottom: 0;
     padding-top: 0; }
-  /* line 32, components/_containers.scss */
+  /* line 40, components/_containers.scss */
   section.introduction {
     border-top: 6px solid #60ace3;
     border-bottom: 6px solid #60ace3;
     background: #0E3450;
     color: #60ace3;
     font-weight: bold; }
-  /* line 40, components/_containers.scss */
+  /* line 48, components/_containers.scss */
   section.usage {
     background: #2f6b91;
     text-align: left; }
-  /* line 44, components/_containers.scss */
+  /* line 52, components/_containers.scss */
   section.exact-matching {
     background: #202d5c; }
-  /* line 47, components/_containers.scss */
+  /* line 55, components/_containers.scss */
   section.no-arguments {
     background: #26376f; }
-  /* line 50, components/_containers.scss */
+  /* line 58, components/_containers.scss */
   section.using-functions {
     background: #2d4082; }
 
-/* line 55, components/_containers.scss */
+/* line 63, components/_containers.scss */
 .row {
   width: 100%;
   max-width: 960px;
   margin: auto;
   margin-bottom: 2em; }
-  /* line 62, components/_containers.scss */
+  /* line 70, components/_containers.scss */
   .row.w {
     outline: 3px solid rgba(255, 255, 0, 0.3);
     outline-offset: 2em; }
@@ -1321,24 +1328,28 @@ div[id*="controls-"] {
 /* line 1, components/_playground.scss */
 .playground {
   background: #0D1621; }
-  /* line 4, components/_playground.scss */
+  @media (max-width: 780px) {
+    /* line 1, components/_playground.scss */
+    .playground {
+      display: none; } }
+  /* line 8, components/_playground.scss */
   .playground .row.editor {
     max-width: 960px; }
-  /* line 9, components/_playground.scss */
+  /* line 13, components/_playground.scss */
   .playground header {
     padding: 2em 0;
     width: 100%;
     float: left; }
-    /* line 15, components/_playground.scss */
+    /* line 19, components/_playground.scss */
     .playground header h2 {
       font-size: 2.5em;
       color: #25A4D7;
       border-bottom: none;
       text-transform: uppercase; }
-  /* line 23, components/_playground.scss */
+  /* line 27, components/_playground.scss */
   .playground .code-bloc {
     margin-bottom: 1em; }
-    /* line 27, components/_playground.scss */
+    /* line 31, components/_playground.scss */
     .playground .code-bloc pre.half {
       position: relative;
       max-width: calc(50% - 8px);
@@ -1346,11 +1357,11 @@ div[id*="controls-"] {
       box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
       min-height: 500px;
       max-height: 600px; }
-    /* line 35, components/_playground.scss */
+    /* line 39, components/_playground.scss */
     .playground .code-bloc pre code {
       padding-bottom: 1em;
       tab-size: 1em; }
-    /* line 40, components/_playground.scss */
+    /* line 44, components/_playground.scss */
     .playground .code-bloc .btn {
       margin-top: 1em;
       float: left;
