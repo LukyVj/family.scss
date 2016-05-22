@@ -19,14 +19,6 @@
               <span class="param">background</span>: <span class="num">blue</span>;
             }
 
-            ul li:nth-child(<span class="num">1</span>) {
-             <span class="param"> background</span>: <span class="num">red</span>
-            }
-
-            ul li:nth-child(<span class="num">2</span>) {
-              <span class="param">background</span>: <span class="num">red</span>
-            }
-
-            ul li:nth-child(<span class="num">3</span>) {
-              <span class="param">background</span>: <span class="num">red</span>
+            ul li:nth-child(-n + 3) {
+              color: red;
             }
