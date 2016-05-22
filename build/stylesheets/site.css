@@ -1375,7 +1375,7 @@ div[id*="controls-"] {
   /* line 18, components/_footer.scss */
   .footer-section .share {
     width: 100%;
-    margin: 40px auto;
+    margin: 40px auto 0;
     float: left;
     height: 100px;
     float: left;
