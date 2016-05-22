@@ -1373,20 +1373,45 @@ div[id*="controls-"] {
       text-decoration: none;
       font-weight: bold; }
   /* line 18, components/_footer.scss */
-  .footer-section:after {
-    position: absolute;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
+  .footer-section .share {
     width: 100%;
-    height: 100%;
-    z-index: 9;
-    background-image: url("../images/icon-family.svg");
-    background-repeat: no-repeat;
-    background-position: bottom 16px left 42px;
-    background-size: 100px;
-    mix-blend-mode: luminosity; }
+    margin: 40px auto;
+    float: left;
+    height: 100px;
+    float: left;
+    line-height: 0;
+    text-align: center; }
+    /* line 27, components/_footer.scss */
+    .footer-section .share a {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      border-bottom: none !important;
+      position: relative;
+      transition: transform .3s ease; }
+      /* line 35, components/_footer.scss */
+      .footer-section .share a:after {
+        position: absolute;
+        display: block;
+        content: 'Spread the word';
+        transform: translateY(-20px) translateX(-50%);
+        color: #55ACEE;
+        opacity: 0;
+        transition: transform .3s ease, opacity .3s ease;
+        width: 200px;
+        text-align: center;
+        left: 50%; }
+      /* line 49, components/_footer.scss */
+      .footer-section .share a:hover {
+        transform: scale(0.9) translateY(-5px); }
+        /* line 52, components/_footer.scss */
+        .footer-section .share a:hover:after {
+          transform: translateY(0) translateX(-50%) scale(1.1);
+          opacity: 1; }
+    /* line 59, components/_footer.scss */
+    .footer-section .share img {
+      max-width: 80px;
+      margin-top: -10px; }
 
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 /**
