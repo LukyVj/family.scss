@@ -9,30 +9,30 @@ Family.scss is a set of **20** smart Sass mixins which will help you to manage t
 ### Use the mixins
 Input :
 ```scss
-	ul li {
-	  background: blue;
+ul li {
+  background: blue;
 
-	  @include first(3) {
-	    background: red
-	  }
-	}
+  @include first(3) {
+    background: red
+  }
+}
 ```
 
 Output :
 ```css
-	ul li {
-	  background: blue;
-	}
+ul li {
+  background: blue;
+}
 
-	ul li:nth-child(1) {
-	  background: red
-	}
+ul li:nth-child(1) {
+  background: red
+}
 
-	ul li:nth-child(2) {
-	  background: red
-	}
+ul li:nth-child(2) {
+  background: red
+}
 
-	ul li:nth-child(3) {
-	  background: red
-	}
+ul li:nth-child(3) {
+  background: red
+}
 ```
