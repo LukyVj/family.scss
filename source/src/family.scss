@@ -6,10 +6,8 @@
 /// @param {numeric} $num - id of the child
 /// @require $num - Cannot work with an empty argument
 @mixin first($num) {
-  @for $i from 0 to $num + 1 {
-    &:nth-child(#{$i}) {
-      @content
-    }
+  &:nth-child(-n + #{$num}) {
+    @content;
   }
 }
 
@@ -21,10 +19,8 @@
 /// @param {numeric} $num - id of the child
 /// @require $num - Cannot work with an empty argument
 @mixin last($num) {
-  @for $i from 0 to $num + 1 {
-    &:nth-last-child(#{$i}) {
-      @content
-    }
+   &:nth-last-child(-n + #{$num}) {
+    @content;
   }
 }
 
