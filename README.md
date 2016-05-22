@@ -21,18 +21,10 @@ ul li {
 Output :
 ```css
 ul li {
-  background: blue;
+  color: blue;
+}
+ul li:nth-child(-n + 3) {
+  color: red;
 }
 
-ul li:nth-child(1) {
-  background: red
-}
-
-ul li:nth-child(2) {
-  background: red
-}
-
-ul li:nth-child(3) {
-  background: red
-}
 ```
