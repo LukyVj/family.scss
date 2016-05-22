@@ -1,331 +1,274 @@
-/// Select all children from the first to **n**
-/// @group with arguments
-/// @name First
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children from the first to `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin first($num) {
   &:nth-child(-n + #{$num}) {
     @content;
   }
 }
 
-/// Select all children from the last to **n**
-/// @group with arguments
-/// @name last
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children from the last to `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin last($num) {
    &:nth-last-child(-n + #{$num}) {
     @content;
   }
 }
 
-/// Select all children after the first to **n**
-/// @group with arguments
-/// @name after-first
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children after the first to `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin after-first($num) {
-  &:nth-child(n+#{$num + 1}) {
-    @content
+  &:nth-child(n + #{$num + 1}) {
+    @content;
   }
 }
 
-/// Select all children before **n** from the last
-/// @group with arguments
-/// @name from-end
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children before `$num` from the last.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin from-end($num) {
   &:nth-last-child(#{$num}) {
-   @content
+   @content;
   }
 }
 
-/// Select all children between **first** and **last**
-/// @group with arguments
-/// @name between
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-@mixin between($first,$last) {
-  &:nth-child(n+#{$first}):nth-child(-n+#{$last}) {
-    @content
+/// Select all children between `$first` and `$last`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin between($first, $last) {
+  &:nth-child(n + #{$first}):nth-child(-n + #{$last}) {
+    @content;
   }
 }
 
-/// Select all even children between **first** and **last**
-/// @group with arguments
-/// @name pair-between
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-@mixin pair-between($first,$last) {
+/// Select all even children between `$first` and `$last`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin pair-between($first, $last) {
   &:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
-    @content
+    @content;
   }
 }
 
-/// Select all odd children between **first** and **last**
-/// @group with arguments
-/// @name impair-between
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-@mixin impair-between($first,$last) {
+/// Select all odd children between `$first` and `$last`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin impair-between($first, $last) {
   &:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
-    @content
+    @content;
   }
 }
 
-/// Select all **n** children between **first** and **last**
-/// @group with arguments
-/// @name n-between
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-@mixin n-between($num,$first,$last) {
+/// Select all `$num` children between `$first` and `$last`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin n-between($num, $first, $last) {
   &:nth-child(#{$num}n):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
-    @content
+    @content;
   }
 }
 
 
-/// Select all children but **n**
-/// @group with arguments
-/// @name all-but
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children but `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin all-but($num) {
   &:not(:nth-child(#{$num})) {
-    @content
+    @content;
   }
 }
 
-/// Select children each **n**
-/// @group with arguments
-/// @name each
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select children each `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 /// @alias every
 @mixin each($num) {
   &:nth-child(#{$num}n) {
-    @content
+    @content;
   }
 }
 
-/// Select children each **n**
-/// @group with arguments
-/// @name every
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
-/// @alias each
+/// Select children each `$num`.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin every($num) {
   &:nth-child(#{$num}n) {
-    @content
+    @content;
   }
 }
 
-/// Select the **n** child from the start and the **n** child from the last
-/// @group with arguments
-/// @name from-first-last
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select the `$num` child from the start and the `$num` child from the last.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin from-first-last($num) {
   &:nth-child(#{$num}),
   &:nth-last-child(#{$num}) {
-    @content
+    @content;
   }
 }
 
 
-/// Select the item in the middle of **n** child. Only works with odd number chain.
-/// @group with arguments
-/// @name middle
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select the item in the middle of `$num` child. Only works with odd number
+/// chain.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin middle($num) {
-  &:nth-child(#{round($num/2)}){
-    @content
+  &:nth-child(#{round($num / 2)}){
+    @content;
   }
 }
 
 
-/// Select all children between the **n** first and the **n** last
-/// @group with arguments
-/// @name all-but-first-last
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - id of the child
-/// @require $num - Cannot work with an empty argument
+/// Select all children between the `$num` first and the `$num` last.
+/// @group with-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - id of the child
 @mixin all-but-first-last($num) {
-  &:nth-child(n+#{$num}):nth-last-child(n+#{$num}){
-    @content
+  &:nth-child(n + #{$num}):nth-last-child(n + #{$num}) {
+    @content;
   }
 }
 
 
-/// This I/O mixin will only select the first of **x** items. It will not work if there is not as much as item as you set in **$limit**
-/// @name first-of
-/// @group I/O
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// This I/O mixin will only select the first of `$limit` items. It will not
+/// work if there is not as much as item as you set in `$limit`.
+/// @group io
+/// @param {number} $limit
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin first-of($limit) {
   &:nth-last-child(#{$limit}):first-child {
-   @content
+   @content;
   }
 }
 
-/// This I/O mixin will only select the last of **x** items. It will not work if there is not as much as item as you set in **$limit**
-/// @name last-of
-/// @group I/O
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// This I/O mixin will only select the last of `$limit` items. It will not 
+/// if there is not as much as item as you set in `$limit`.
+/// @group io
+/// @param {number} $limit
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin last-of($limit) {
-  &:nth-of-type(#{$limit}):nth-last-of-type(1){
-    @content
+  &:nth-of-type(#{$limit}):nth-last-of-type(1) {
+    @content;
   }
 }
 
-///  Select all even children
-/// @group no argumants
-/// @name pair()
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// Select all even children.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @alias even
 @mixin pair() {
   &:nth-child(even) {
-    @content
+    @content;
   }
 }
 
-///  Select all even children
-/// @group no argumants
-/// @name even()
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-@mixin even(){
+/// Select all even children.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin even() {
   &:nth-child(even) {
-    @content
+    @content;
   }
 }
 
-/// Select all odd children
-/// @group no argumants
-/// @name impair
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// Select all odd children.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @alias odd
 @mixin impair() {
   &:nth-child(odd) {
-    @content
+    @content;
   }
 }
 
-/// Select all odd children
-/// @group no argumants
-/// @name odd
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @alias impair
-@mixin odd(){
+/// Select all odd children.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+@mixin odd() {
   &:nth-child(odd) {
-    @content
+    @content;
   }
 }
 
-/// Select only the first and last child
-/// @group no argumants
-/// @name first-last
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// Select only the first and last child.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin first-last() {
   &:first-child,
   &:last-child {
-    @content
+    @content;
   }
 }
 
-/// Will only select the child if it's unique
-/// @group no argumants
-/// @name unique
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// Will only select the child if it’s unique.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @alias only
 @mixin unique() {
   &:only-child {
-    @content
+    @content;
   }
 }
 
-/// Will only select the child if it's unique
-/// @group no argumants
-/// @name only()
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @alias unique
+/// Will only select the child if it’s unique.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin only() {
   &:only-child {
-    @content
+    @content;
   }
 }
 
-/// Will only select children if they are not unique. Meaning if there is at least 2 children, the style is applied.
-/// @group no argumants
-/// @name not-unique
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
+/// Will only select children if they are not unique. Meaning if there is at
+/// least 2 children, the style is applied.
+/// @group no-arguments
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin not-unique() {
   &:not(:only-child) {
-    @content
+    @content;
   }
 }
 
 
-/// This mixin is used to automatically sort z-index in numerical order. But it can also sort them
-/// in anti-numerical order, depending the parameters you use.
+/// This mixin is used to automatically sort z-index in numerical order. But it
+/// can also sort them in anti-numerical order, depending the parameters you use.
 /// @group using functions
-/// @name child-index
-/// @access public
-/// @content [ Write the style you want to apply to the childrent, and it will be added within the @content directive]
-/// @param {numeric} $num - Number of children
+/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
+/// @param {number} $num - Number of children
 /// @param {string} $direction [forward] - Direction of the sort
-/// @param {numeric} $index [0] - Index of the sorting
+/// @param {number} $index [0] - Index of the sorting
 @mixin child-index($num, $direction: 'forward', $index: 0) {
   @for $i from 1 through $num {
-    @if $direction == 'forward' {
+    @if ($direction == 'forward') {
       &:nth-child(#{$i}) {
-      z-index: orderIndex($i, $index);
-      @content;
-    }
-
-    }
-  @if $direction == 'backward' {
+        z-index: order-index($i, $index);
+        @content;
+      }
+    } @else if ($direction == 'backward') {
       &:nth-last-child(#{$i}) {
-        z-index: orderIndex($i, $index);
+        z-index: order-index($i, $index);
         @content;
       }
     }
   }
 }
 
-/// Used by the child-index mixin. It will returned the proper sorted numbers depending on the index value.
-/// @name orderIndex
-/// @access public
-/// @param {numeric} $num - Number of children
-/// @param {numeric} $index [0] - Index of the sorting
-@function orderIndex($i, $index){
-  $i:$index + $i;
-  @return $i
+/// Used by the child-index mixin. It will returned the proper sorted numbers
+/// depending on the `$index` value.
+/// @access private
+/// @param {number} $num - Number of children
+/// @param {number} $index - Index of the sorting
+@function order-index($i, $index) {
+  @return ($index + $i);
 }
