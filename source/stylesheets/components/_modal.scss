@@ -52,6 +52,12 @@
     text-decoration: none;
   }
 
+  p a {
+    &:hover {
+      color: $al-pink-dark;
+    }
+  }
+
   li {
     text-align: center;
     position: relative;

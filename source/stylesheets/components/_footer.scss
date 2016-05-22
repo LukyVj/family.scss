@@ -12,6 +12,9 @@
       text-decoration: none;
       font-weight: bold;
 
+      &:hover {
+        color: $al-pink-dark;
+      }
     }
   }
 
