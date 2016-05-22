@@ -15,19 +15,50 @@
     }
   }
 
-  &:after {
-      position: absolute;
-      display: block;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9;
-      background-image: url("../images/icon-family.svg");
-      background-repeat: no-repeat;
-      background-position: bottom 16px left 42px;
-      background-size: 100px;
-      mix-blend-mode: luminosity;
+  .share{
+    width: 100%;
+    margin: 40px auto;
+    float: left;
+    height: 100px;
+    float: left;
+    line-height: 0;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      border-bottom: none !important;
+      position: relative;
+      transition: transform .3s ease;
+
+      &:after {
+        position: absolute;
+        display: block;
+
+        content: 'Spread the word';
+        transform: translateY(-20px) translateX(-50%);
+        color: #55ACEE;
+        opacity: 0;
+        transition: transform .3s ease, opacity .3s ease;
+        width: 200px;
+        text-align: center;
+        left: 50%;
+      }
+
+      &:hover {
+        transform: scale(.9) translateY(-5px);
+
+        &:after {
+          transform: translateY(0) translateX(-50%) scale(1.1);
+          opacity: 1;
+        }
+      }
     }
+
+    img {
+      max-width: 80px;
+      margin-top: -10px;
+    }
+  }
 }

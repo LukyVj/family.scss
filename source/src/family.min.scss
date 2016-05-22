@@ -1,0 +1,147 @@
+
+@mixin first($num) {
+  @for $i from 0 to $num + 1 {
+    &:nth-child(#{$i}) {
+      @content
+    }
+  }
+}
+@mixin last($num) {
+  @for $i from 0 to $num + 1 {
+    &:nth-last-child(#{$i}) {
+      @content
+    }
+  }
+}
+@mixin after-first($num) {
+  &:nth-child(n+#{$num + 1}) {
+    @content
+  }
+}
+@mixin from-end($num) {
+  &:nth-last-child(#{$num}) {
+   @content
+ }
+}
+@mixin between($first,$last) {
+  &:nth-child(n+#{$first}):nth-child(-n+#{$last}) {
+    @content
+  }
+}
+@mixin pair-between($first,$last) {
+  &:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
+    @content
+  }
+}
+@mixin impair-between($first,$last) {
+  &:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
+    @content
+  }
+}
+@mixin n-between($num,$first,$last) {
+  &:nth-child(#{$num}n):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
+    @content
+  }
+}
+@mixin all-but($num) {
+  &:not(:nth-child(#{$num})) {
+    @content
+  }
+}
+@mixin each($num) {
+  &:nth-child(#{$num}n) {
+    @content
+  }
+}
+@mixin every($num) {
+  &:nth-child(#{$num}n) {
+    @content
+  }
+}
+@mixin from-first-last($num) {
+  &:nth-child(#{$num}),
+  &:nth-last-child(#{$num}) {
+    @content
+  }
+}
+@mixin middle($num) {
+  &:nth-child(#{round($num/2)}){
+    @content
+  }
+}
+@mixin all-but-first-last($num) {
+  &:nth-child(n+#{$num}):nth-last-child(n+#{$num}){
+    @content
+  }
+}
+@mixin first-of($limit) {
+  &:nth-last-child(#{$limit}):first-child {
+   @content
+ }
+}
+@mixin last-of($limit) {
+  &:nth-of-type(#{$limit}):nth-last-of-type(1){
+    @content
+  }
+}
+@mixin pair() {
+  &:nth-child(even) {
+    @content
+  }
+}
+@mixin even(){
+  &:nth-child(even) {
+    @content
+  }
+}
+@mixin impair() {
+  &:nth-child(odd) {
+    @content
+  }
+}
+@mixin odd(){
+  &:nth-child(odd) {
+    @content
+  }
+}
+@mixin first-last() {
+  &:first-child,
+  &:last-child {
+    @content
+  }
+}
+@mixin unique() {
+  &:only-child {
+    @content
+  }
+}
+@mixin only() {
+  &:only-child {
+    @content
+  }
+}
+@mixin not-unique() {
+  &:not(:only-child) {
+    @content
+  }
+}
+@mixin child-index($num, $direction: 'forward', $index: 0) {
+  @for $i from 1 through $num {
+    @if $direction == 'forward' {
+      &:nth-child(#{$i}) {
+        z-index: orderIndex($i, $index);
+        @content;
+      }
+    }
+    @if $direction == 'backward' {
+      &:nth-last-child(#{$i}) {
+        z-index: orderIndex($i, $index);
+        @content;
+      }
+    }
+  }
+}
+@function orderIndex($i, $index){
+  $i:$index + $i;
+  @return $i
+}
