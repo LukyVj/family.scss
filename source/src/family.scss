@@ -6,9 +6,13 @@
 /// @param {numeric} $num - id of the child
 /// @require $num - Cannot work with an empty argument
 @mixin first($num) {
+  @at-root{
+    %content { @content; }
+  }
+
   @for $i from 0 to $num + 1 {
     &:nth-child(#{$i}) {
-      @content
+      @extend %content;
     }
   }
 }
