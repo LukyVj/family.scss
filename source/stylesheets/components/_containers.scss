@@ -18,6 +18,14 @@ section {
 
     @media (max-width: 780px) {
       padding: 2em 2em;
+
+      .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: inline-block;
+        line-height: 1;
+        margin-bottom: 1em;
+      }
     }
   }
   &.search-section {

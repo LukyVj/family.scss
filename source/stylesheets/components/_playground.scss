@@ -1,6 +1,10 @@
 .playground {
   background: $al-black;
 
+  @media (max-width: 780px) {
+    display: none;
+  }
+
   .row.editor {
     max-width: 960px;
   }
