@@ -893,6 +893,11 @@ header {
     width: 100%;
     max-width: 100%; }
 
+/* line 87, components/_buttons.scss */
+_:-moz-tree-row(hover), .btn svg {
+  transform: none;
+  top: 8px; }
+
 /* line 1, components/_code-bloc.scss */
 .row.editor {
   max-width: 1400px; }
