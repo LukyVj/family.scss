@@ -898,6 +898,10 @@ _:-moz-tree-row(hover), .btn svg {
   transform: none;
   top: 8px; }
 
+/* line 91, components/_buttons.scss */
+_:-moz-tree-row(hover), .btn-blue svg {
+  top: 0; }
+
 /* line 1, components/_code-bloc.scss */
 .row.editor {
   max-width: 1400px; }
