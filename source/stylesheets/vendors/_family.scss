@@ -191,10 +191,6 @@
 // Quantity Queries - http://quantityqueries.com/
 //////////////////
 
-// $child should always be the element/class that you are counting.
-// for example if you are counting LIs within a UL, you would pass in LI.
-// see http://quantityqueries.com/ for reference
-
 @mixin at-least($num) {
     $selector: &;
     $child: nth(nth($selector, -1), -1);
