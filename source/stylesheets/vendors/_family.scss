@@ -187,3 +187,34 @@
   }
   @return $i
 }
+
+// Quantity Queries - http://quantityqueries.com/
+//////////////////
+
+// $child should always be the element/class that you are counting.
+// for example if you are counting LIs within a UL, you would pass in LI.
+// see http://quantityqueries.com/ for reference
+
+@mixin at-least($num, $child) {
+  $child: nth(selector-parse(&), -1);
+  &:nth-last-child(n + #{$num}), 
+  &:nth-last-child(n + #{$num}) ~ #{$child} {
+    @content;
+  }
+}
+
+@mixin at-most($num) {
+  $child: nth(selector-parse(&), -1);
+  &:nth-last-child(-n + #{$num}):first-child, 
+  &:nth-last-child(-n + #{$num}):first-child ~ #{$child} {
+    @content;
+  }
+}
+
+@mixin in-between($min, $max) {
+  $child: nth(selector-parse(&), -1);
+  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child, 
+  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} {
+    @content;
+  }
+}
