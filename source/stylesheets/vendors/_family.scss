@@ -1,5 +1,4 @@
 // Argument mixin
-//////////////////
 @mixin first($num) {
   &:nth-child(-n + #{$num}) {
     @content;
@@ -89,8 +88,6 @@
 }
 
 // I/O mixin
-//////////////////
-
 @mixin first-of($limit) {
   &:nth-last-child(#{$limit}):first-child {
    @content
@@ -104,13 +101,12 @@
 }
 
 // without arguments
-//////////////////
-
 @mixin pair() {
   &:nth-child(even) {
     @content
   }
 }
+
 // Alias of pair()
 @mixin even(){
   @include pair {
@@ -123,6 +119,7 @@
     @content
   }
 }
+
 // Alias impair()
 @mixin odd(){
   @include impair {
@@ -148,13 +145,13 @@
     @content
   }
 }
+
 // Alias of unique()
 @mixin only() {
   @include unique(){
     @content
   }
 }
-
 
 // Using functions
 @mixin child-index($num, $direction: 'forward', $index: 0) {
@@ -174,8 +171,6 @@
     }
   }
 }
-
-
 
 // Functions
 @function orderIndex($i, $index, $direction){
