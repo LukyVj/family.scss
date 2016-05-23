@@ -152,7 +152,7 @@
   }
 }
 
-/// This I/O mixin will only select the last of `$limit` items. It will not 
+/// This I/O mixin will only select the last of `$limit` items. It will not
 /// if there is not as much as item as you set in `$limit`.
 /// @group io
 /// @param {number} $limit

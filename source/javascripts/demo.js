@@ -21,7 +21,7 @@ function first(num) {
 
 	function injectStyle(num){
 		document.getElementById('style-first').innerHTML = `ul.first li { ${preStyle} }`;
-		document.getElementById'style-first').innerHTML += `.first li:nth-child(-n + ${num}){
+		document.getElementById('style-first').innerHTML += `.first li:nth-child(-n + ${num}){
 			${selectedStyle}
 		}`;
 	}
@@ -40,7 +40,7 @@ function last(num) {
 
 	function injectStyle(num){
 		document.getElementById('style-last').innerHTML = `ul.last li { ${preStyle} }`;
-		document.getElementById('style-first').innerHTML += `.last li:nth-last-child(-n + ${num}){
+		document.getElementById('style-last').innerHTML += `.last li:nth-last-child(-n + ${num}){
 			${selectedStyle}
 		}`;
 	}

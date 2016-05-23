@@ -20,8 +20,8 @@ font-weight: 300 !important;
 function first(num) {
 
 	function injectStyle(num){
-		document.querySelector('#style-first').innerHTML = `ul.first li { ${preStyle} }`;
-		document.querySelector('#style-first').innerHTML += `.first li:nth-child(-n + ${num}){
+		document.getElementById('style-first').innerHTML = `ul.first li { ${preStyle} }`;
+		document.getElementById('style-first').innerHTML += `.first li:nth-child(-n + ${num}){
 			${selectedStyle}
 		}`;
 	}
@@ -39,8 +39,8 @@ document.getElementById('first').addEventListener('keyup', function(){
 function last(num) {
 
 	function injectStyle(num){
-		document.querySelector('#style-last').innerHTML = `ul.last li { ${preStyle} }`;
-		document.querySelector('#style-first').innerHTML += `.last li:nth-last-child(-n + ${num}){
+		document.getElementById('style-last').innerHTML = `ul.last li { ${preStyle} }`;
+		document.getElementById('style-last').innerHTML += `.last li:nth-last-child(-n + ${num}){
 			${selectedStyle}
 		}`;
 	}
@@ -59,8 +59,8 @@ function afterFirst(num) {
 
 	function injectStyle(num){
 		var num = parseInt(num) + 1;
-		document.querySelector('#style-after-first').innerHTML = `ul.after-first li { ${preStyle} }`;
-		document.querySelector('#style-after-first').innerHTML += `.after-first li:nth-child(n+${num}){
+		document.getElementById('style-after-first').innerHTML = `ul.after-first li { ${preStyle} }`;
+		document.getElementById('style-after-first').innerHTML += `.after-first li:nth-child(n+${num}){
 			${selectedStyle}
 		}
 		`
@@ -78,8 +78,8 @@ document.getElementById('after-first').addEventListener('keyup', function(){
 
 function fromEnd(num) {
 	function injectStyle(num){
-		document.querySelector('#style-from-end').innerHTML = `ul.from-end li { ${preStyle} }`;
-		document.querySelector('#style-from-end').innerHTML += `.from-end li:nth-last-child(${num}){
+		document.getElementById('style-from-end').innerHTML = `ul.from-end li { ${preStyle} }`;
+		document.getElementById('style-from-end').innerHTML += `.from-end li:nth-last-child(${num}){
 			${selectedStyle}
 		}
 		`
@@ -97,8 +97,8 @@ document.getElementById('from-end').addEventListener('keyup', function(){
 
 function between(numa, numb) {
 	function injectStyle(numa, numb){
-		document.querySelector('#style-between').innerHTML = `ul.between li { ${preStyle} }`;
-		document.querySelector('#style-between').innerHTML += `.between li:nth-child(n+${numa}):nth-child(-n+${numb}){
+		document.getElementById('style-between').innerHTML = `ul.between li { ${preStyle} }`;
+		document.getElementById('style-between').innerHTML += `.between li:nth-child(n+${numa}):nth-child(-n+${numb}){
 			${selectedStyle}
 		}
 		`
@@ -119,8 +119,8 @@ document.getElementById('between').addEventListener('keyup', function(){
 
 function pairBetween(numa, numb) {
 	function injectStyle(numa, numb){
-		document.querySelector('#style-pair-between').innerHTML = `ul.pair-between li { ${preStyle} }`;
-		document.querySelector('#style-pair-between').innerHTML += `.pair-between li:nth-child(even):nth-child(n + ${numa}):nth-child(-n + ${numb}){
+		document.getElementById('style-pair-between').innerHTML = `ul.pair-between li { ${preStyle} }`;
+		document.getElementById('style-pair-between').innerHTML += `.pair-between li:nth-child(even):nth-child(n + ${numa}):nth-child(-n + ${numb}){
 			${selectedStyle}
 		}
 		`
@@ -140,8 +140,8 @@ document.getElementById('pair-between').addEventListener('keyup', function(){
 
 function impairBetween(numa, numb) {
 	function injectStyle(numa, numb){
-		document.querySelector('#style-impair-between').innerHTML = `ul.impair-between li { ${preStyle} }`;
-		document.querySelector('#style-impair-between').innerHTML += `.impair-between li:nth-child(odd):nth-child(n + ${numa}):nth-child(-n + ${numb}){
+		document.getElementById('style-impair-between').innerHTML = `ul.impair-between li { ${preStyle} }`;
+		document.getElementById('style-impair-between').innerHTML += `.impair-between li:nth-child(odd):nth-child(n + ${numa}):nth-child(-n + ${numb}){
 			${selectedStyle}
 		}
 		`
@@ -163,8 +163,8 @@ document.getElementById('impair-between').addEventListener('keyup', function(){
 
 function allBut(num) {
 	function injectStyle(num){
-		document.querySelector('#style-all-but').innerHTML = `ul.all-but li { ${preStyle} }`;
-		document.querySelector('#style-all-but').innerHTML += `.all-but li:not(:nth-child(${num})){
+		document.getElementById('style-all-but').innerHTML = `ul.all-but li { ${preStyle} }`;
+		document.getElementById('style-all-but').innerHTML += `.all-but li:not(:nth-child(${num})){
 			${selectedStyle}
 		}
 		`
@@ -182,8 +182,8 @@ document.getElementById('all-but').addEventListener('keyup', function(){
 
 function each(num) {
 	function injectStyle(num){
-		document.querySelector('#style-each').innerHTML = `ul.each li { ${preStyle} }`;
-		document.querySelector('#style-each').innerHTML += `.each li:nth-child(${num}n){
+		document.getElementById('style-each').innerHTML = `ul.each li { ${preStyle} }`;
+		document.getElementById('style-each').innerHTML += `.each li:nth-child(${num}n){
 			${selectedStyle}
 		}
 		`
@@ -201,8 +201,8 @@ document.getElementById('each').addEventListener('keyup', function(){
 
 function fromFirstLast(num) {
 	function injectStyle(num){
-		document.querySelector('#style-from-first-last').innerHTML = `ul.from-first-last li { ${preStyle} }`;
-		document.querySelector('#style-from-first-last').innerHTML += `.from-first-last li:nth-child(${num}),
+		document.getElementById('style-from-first-last').innerHTML = `ul.from-first-last li { ${preStyle} }`;
+		document.getElementById('style-from-first-last').innerHTML += `.from-first-last li:nth-child(${num}),
 		.from-first-last li:nth-last-child(${num}){
 			${selectedStyle}
 		}
@@ -222,8 +222,8 @@ document.getElementById('from-first-last').addEventListener('keyup', function(){
 
 function middle(num) {
 	function injectStyle(num){
-		document.querySelector('#style-middle').innerHTML = `ul.middle li { ${preStyle} }`;
-		document.querySelector('#style-middle').innerHTML += `.middle li:nth-child(${Math.round(num/2)}){
+		document.getElementById('style-middle').innerHTML = `ul.middle li { ${preStyle} }`;
+		document.getElementById('style-middle').innerHTML += `.middle li:nth-child(${Math.round(num/2)}){
 			${selectedStyle}
 		}
 		`
@@ -243,8 +243,8 @@ document.getElementById('middle').addEventListener('keyup', function(){
 function allButFirstLast(num) {
 	function injectStyle(num){
 		num = parseInt(num) + 1;
-		document.querySelector('#style-all-but-first-last').innerHTML = `ul.all-but-first-last li { ${preStyle} }`;
-		document.querySelector('#style-all-but-first-last').innerHTML += `.all-but-first-last li:nth-child(n+${num}):nth-last-child(n+${num}){
+		document.getElementById('style-all-but-first-last').innerHTML = `ul.all-but-first-last li { ${preStyle} }`;
+		document.getElementById('style-all-but-first-last').innerHTML += `.all-but-first-last li:nth-child(n+${num}):nth-last-child(n+${num}){
 			${selectedStyle}
 		}
 		`
@@ -263,8 +263,8 @@ document.getElementById('all-but-first-last').addEventListener('keyup', function
 
 function firstOf(num) {
 	function injectStyle(num){
-		document.querySelector('#style-first-of').innerHTML = `ul.first-of li { ${preStyle} }`;
-		document.querySelector('#style-first-of').innerHTML += `.first-of li:nth-last-child(${num}):first-child {
+		document.getElementById('style-first-of').innerHTML = `ul.first-of li { ${preStyle} }`;
+		document.getElementById('style-first-of').innerHTML += `.first-of li:nth-last-child(${num}):first-child {
 			${selectedStyle}
 		}
 		`
@@ -283,8 +283,8 @@ document.getElementById('first-of').addEventListener('keyup', function(){
 
 function lastOf(num) {
 	function injectStyle(num){
-		document.querySelector('#style-last-of').innerHTML = `ul.last-of li { ${preStyle} }`;
-		document.querySelector('#style-last-of').innerHTML += `.last-of li:nth-of-type(${num}):nth-last-of-type(1) {
+		document.getElementById('style-last-of').innerHTML = `ul.last-of li { ${preStyle} }`;
+		document.getElementById('style-last-of').innerHTML += `.last-of li:nth-of-type(${num}):nth-last-of-type(1) {
 			${selectedStyle}
 		}
 		`
@@ -296,6 +296,3 @@ function lastOf(num) {
 document.getElementById('last-of').addEventListener('keyup', function(){
 	lastOf(this.innerHTML)
 })
-
-
-
