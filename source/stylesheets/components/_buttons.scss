@@ -17,7 +17,7 @@
   transition: background 0.1s ease;
   cursor: pointer;
   outline: none;
-  
+
   &.w-icon {
     padding-left: 48px !important;
     position: relative;
@@ -81,4 +81,10 @@
     width: 100%;
     max-width: 100%;
   }
+}
+
+// Fix icons for firefox
+_:-moz-tree-row(hover), .btn svg {
+  transform: none;
+  top: 8px;
 }
