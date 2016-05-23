@@ -106,26 +106,14 @@
 // without arguments
 //////////////////
 
-@mixin pair() {
+@mixin even(){
   &:nth-child(even) {
     @content
   }
 }
-// Alias of pair()
-@mixin even(){
-  @include pair {
-    @content
-  }
-}
 
-@mixin impair() {
-  &:nth-child(odd) {
-    @content
-  }
-}
-// Alias impair()
 @mixin odd(){
-  @include impair {
+  &:nth-child(odd) {
     @content
   }
 }

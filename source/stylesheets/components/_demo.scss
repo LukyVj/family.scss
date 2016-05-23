@@ -219,7 +219,7 @@ ul {
   // No arguments mixins
   &.pair {
     li {
-      @include pair {
+      @include even {
         @include selected;
       }
     }
@@ -227,7 +227,7 @@ ul {
 
   &.impair {
     li {
-      @include impair {
+      @include odd {
         @include selected;
       }
     }
