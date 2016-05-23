@@ -6,7 +6,7 @@
 }
 
 @mixin last($num) {
-   &:nth-last-child(-n + #{$num}) {
+  &:nth-last-child(-n + #{$num}) {
     @content;
   }
 }
@@ -14,12 +14,12 @@
 @mixin after-first($num) {
   &:nth-child(n+#{$num + 1}) {
     @content
-   }
+  }
 }
 
 @mixin from-end($num) {
   &:nth-last-child(#{$num}) {
-   @content
+    @content
   }
 }
 
@@ -90,7 +90,7 @@
 // I/O mixin
 @mixin first-of($limit) {
   &:nth-last-child(#{$limit}):first-child {
-   @content
+    @content
   }
 }
 
@@ -101,28 +101,14 @@
 }
 
 // without arguments
-@mixin pair() {
+@mixin even(){
   &:nth-child(even) {
     @content
   }
 }
 
-// Alias of pair()
-@mixin even(){
-  @include pair {
-    @content
-  }
-}
-
-@mixin impair() {
-  &:nth-child(odd) {
-    @content
-  }
-}
-
-// Alias impair()
 @mixin odd(){
-  @include impair {
+  &:nth-child(odd) {
     @content
   }
 }
@@ -158,12 +144,12 @@
   @for $i from 1 through $num {
     @if $direction == 'forward' {
       &:nth-child(#{$i}) {
-      z-index: orderIndex($i, $index, $direction);
-      @content;
-    }
+        z-index: orderIndex($i, $index, $direction);
+        @content;
+      }
 
     }
-  @if $direction == 'backward' {
+    @if $direction == 'backward' {
       &:nth-last-child(#{$i}) {
         z-index: orderIndex($i, $index, $direction);
         @content;
