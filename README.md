@@ -21,10 +21,10 @@ ul li {
 Output :
 ```css
 ul li {
-  color: blue;
+  background: blue;
 }
 ul li:nth-child(-n + 3) {
-  color: red;
+  background: red;
 }
 
 ```
