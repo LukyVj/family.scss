@@ -995,14 +995,17 @@ pre {
   color: #eee;
   overflow: hidden;
   display: block;
-  padding-right: 16px;
+  padding-right: 16px; }
+
+/* line 120, components/_code-bloc.scss */
+.language-css {
   font-size: 13px; }
 
-/* line 122, components/_code-bloc.scss */
+/* line 124, components/_code-bloc.scss */
 #css {
   overflow: auto; }
 
-/* line 127, components/_code-bloc.scss */
+/* line 129, components/_code-bloc.scss */
 .code-bloc .bloc {
   z-index: 100;
   width: 50%;
