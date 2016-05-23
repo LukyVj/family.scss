@@ -30,3 +30,7 @@ ul li:nth-child(-n + 3) {
 }
 
 ```
+
+### Why only Sass ?
+It's true, I did it for Sass, but some awesome contributors extended it to :
+- [Stylus](https://github.com/nusususuzu/family.styl)
