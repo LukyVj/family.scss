@@ -9,10 +9,10 @@ Family.scss is a set of **20** smart Sass mixins which will help you to manage t
 - `$ middleman` ( You don't use middleman ? Goto [https://middlemanapp.com/](https://middlemanapp.com/) )
 
 ### Alternative install
-- `npm install family.scss`
-- `bower install family.scss`
+- `$ npm install family.scss`
+- `$ bower install family.scss`
 
-The project is now on [npm](https://www.npmjs.com/package/family.scss)
+The project is now available on [npm](https://www.npmjs.com/package/family.scss)
 
 ### Use the mixins
 Input :
@@ -21,7 +21,7 @@ ul li {
   background: blue;
 
   @include first(3) {
-    background: blue
+    background: blue;
   }
 }
 ```
