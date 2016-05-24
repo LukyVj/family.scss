@@ -4,17 +4,17 @@
 Family.scss is a set of **20** smart Sass mixins which will help you to manage the style of `:nth-child`'ified elements, in an easy and classy way.
 
 
-### Install
+## Install
 - Clone the project
 - `$ middleman` ( You don't use middleman ? Goto [https://middlemanapp.com/](https://middlemanapp.com/) )
 
-### Alternative install
+## Alternative install
 - `$ npm install family.scss`
 - `$ bower install family.scss`
 
 The project is now available on [npm](https://www.npmjs.com/package/family.scss)
 
-### Use the mixins
+## Use the mixins
 Input :
 ```scss
 ul li {
@@ -37,6 +37,6 @@ ul li:nth-child(-n + 3) {
 
 ```
 
-### Why only Sass ?
+## Why only Sass ?
 It's true, I did it for Sass, but some awesome contributors extended it to :
 - [Stylus](https://github.com/nusususuzu/family.styl)
