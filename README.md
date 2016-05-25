@@ -5,7 +5,7 @@
 Family.scss is a set of **20** smart Sass mixins which will help you to manage the style of `:nth-child`'ified elements, in an easy and classy way.
 
 
-## Install
+## Installation
 
 ### Regular
 - Clone the project
@@ -17,7 +17,7 @@ Family.scss is a set of **20** smart Sass mixins which will help you to manage t
 
 Family.scss on [npm](https://www.npmjs.com/package/family.scss)
 
-### Use the mixins
+## Usage
 Input :
 ```scss
 ul li {
