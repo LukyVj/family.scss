@@ -1,0 +1,76 @@
+/* carbon */
+#carbonads {
+  position:fixed;
+  right:0;
+  bottom:0;
+  box-sizing:border-box;
+  float: right;
+  background-color: rgba(0,0,0,.15);
+  padding: 1.5rem;
+  width: 13rem;
+  text-align: left !important;
+  font-size:13px;
+  margin:0;
+  min-height:1.3rem;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+#carbonads .carbon-img {
+  float:left;
+  width:100%;
+  position: relative;
+  margin: auto;
+
+  img {
+    margin-bottom:1.5rem;
+    width:100%;
+    position: relative;
+  }
+}
+#carbonads .carbon-poweredby{
+  margin-top:1rem;
+  display:block;
+}
+
+// ////////* carbon */
+// #carbonads {
+//   position:absolute;
+//   right: 0;
+//   left: 0;
+//   top: 200px;
+//   box-sizing: border-box;
+//   float: none;
+//   clear: both;
+
+//   background-color: rgba(0,0,0,.15);
+//   padding: 1.5rem;
+//   width: 13rem;
+//   text-align: left !important;
+//   font-size: 13px;
+//   margin: 1em auto;
+//   min-height:1.3rem;
+
+//   a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+// }
+// #carbonads .carbon-img {
+//   float:left;
+//   width:100%;
+//   position: relative;
+//   margin: auto;
+
+//   img {
+//     margin-bottom:1.5rem;
+//     width:100%;
+//     position: relative;
+//   }
+// }
+// #carbonads .carbon-poweredby{
+//   margin-top:1rem;
+//   display:block;
+// }
