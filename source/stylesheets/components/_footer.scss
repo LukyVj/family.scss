@@ -6,6 +6,15 @@
   p {
     position: relative;
     z-index: 10;
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #496f92;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 800;
 
     a {
       color: $al-blue-light;
@@ -15,6 +24,10 @@
       &:hover {
         color: $al-pink-dark;
       }
+    }
+
+    &.version {
+      font-size: 0.65em;
     }
   }
 

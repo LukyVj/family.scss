@@ -57,19 +57,28 @@
             }
 
             /*=====================
-               pair-between(3, 12)
+               even-between(3, 12)
             =====================*/
             ul li {
-              @include pair-between(3, 12){
+              @include even-between(3, 12){
                 @include active;
               }
             }
 
             /*=====================
-               impair-between(3, 13)
+               odd-between(3, 13)
             =====================*/
             ul li {
-              @include impair-between(3, 13){
+              @include odd-between(3, 13){
+                @include active;
+              }
+            }
+
+            /*=====================
+               n-between(3, 10, 20)
+            =====================*/
+            ul li {
+              @include n-between(3, 10, 20){
                 @include active;
               }
             }
@@ -142,6 +151,33 @@
             =====================*/
             ul li {
               @include last-of(10){
+                @include active;
+              }
+            }
+
+            /*=====================
+               at-least(10)
+            =====================*/
+            ul li {
+              @include at-least(10){
+                @include active;
+              }
+            }
+
+            /*=====================
+               at-most(10)
+            =====================*/
+            ul li {
+              @include at-most(10){
+                @include active;
+              }
+            }
+
+            /*=====================
+               in-between(5, 10)
+            =====================*/
+            ul li {
+              @include in-between(5, 10){
                 @include active;
               }
             }

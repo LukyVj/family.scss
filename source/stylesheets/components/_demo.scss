@@ -134,17 +134,17 @@ ul {
     }
   }
 
-  &.pair-between {
+  &.even-between {
     li {
-      @include pair-between(3, 12) {
+      @include even-between(3, 12) {
         @include selected;
       }
     }
   }
 
-  &.impair-between {
+  &.odd-between {
     li {
-      @include impair-between(3, 13) {
+      @include odd-between(3, 13) {
         @include selected;
       }
     }
@@ -198,7 +198,7 @@ ul {
     }
   }
 
-  // I/O mixins
+  // Quantity-query mixins
   &.first-of {
     li {
       @include first-of(10) {
@@ -215,9 +215,32 @@ ul {
     }
   }
 
+  &.at-least {
+    li {
+      @include at-least(5) {
+        @include selected;
+      }
+    }
+  }
+
+  &.at-most {
+    li {
+      @include at-most(5) {
+        @include selected;
+      }
+    }
+  }
+
+  &.in-between {
+    li {
+      @include in-between(5, 10) {
+        @include selected;
+      }
+    }
+  }
 
   // No arguments mixins
-  &.pair {
+  &.even {
     li {
       @include even {
         @include selected;
@@ -225,7 +248,7 @@ ul {
     }
   }
 
-  &.impair {
+  &.odd {
     li {
       @include odd {
         @include selected;

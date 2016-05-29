@@ -105,11 +105,11 @@
 
       %div.row.mixin
         %header
-          %h3 pair-between
+          %h3 even-between
         %pre
-          %code#pair-between <span class="param">@include</span> pair-between(<span class="num" contenteditable id="pair-between-a">3</span>, <span class="num" contenteditable id="pair-between-b">12</span>)
+          %code#even-between <span class="param">@include</span> even-between(<span class="num" contenteditable id="even-between-a">3</span>, <span class="num" contenteditable id="even-between-b">12</span>)
 
-        %ul.pair-between
+        %ul.even-between
           %li 1
           %li 2
           %li 3
@@ -128,11 +128,38 @@
 
       %div.row.mixin
         %header
-          %h3 impair-between
+          %h3 odd-between
         %pre
-          %code#impair-between <span class="param">@include</span> impair-between(<span class="num" contenteditable id="impair-between-a">3</span>, <span class="num" contenteditable id="impair-between-b">13</span>)
+          %code#odd-between <span class="param">@include</span> odd-between(<span class="num" contenteditable id="odd-between-a">3</span>, <span class="num" contenteditable id="odd-between-b">13</span>)
 
-        %ul.impair-between
+        %ul.odd-between
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+          %li 11
+          %li 12
+          %li 13
+          %li 14
+          %li 15
+
+      %div.row.mixin
+        %header
+          %h3 n-between
+        %pre
+          %code#n-between
+            :preserve
+              <span class="param">@include</span> n-between(<span class="num" contenteditable id="n-between-a">3</span>,<span class="num" contenteditable id="n-between-b">3</span>,<span class="num" contenteditable id="n-between-c">13</span>)
+              <span class="comment"> // This mixin uses 3 arguments, the first one is equal to N item,
+               // the second is the starting item and the thirs the end item.  </span>
+
+        %ul.n-between
           %li 1
           %li 2
           %li 3
@@ -256,7 +283,7 @@
     %section.exact-matching
       .row
         %header
-          %h2.title I/O Mixins
+          %h2.title Quantity queries
       %div.row.mixin
         %header
           %h3 first-of
@@ -297,6 +324,65 @@
           %li 9
           %li 10
 
+
+      %div.row.mixin
+        %header
+          %h3 at-least
+        %pre
+          %code
+            :preserve
+              <span class="param"> @include</span> at-least(<span class="num" contenteditable id="at-least">5</span>)
+
+        %ul.at-least
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+
+
+      %div.row.mixin
+        %header
+          %h3 at-most
+        %pre
+          %code
+            :preserve
+              <span class="param"> @include</span> at-most(<span class="num" contenteditable id="at-most">5</span>)
+
+        %ul.at-most
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+
+      %div.row.mixin
+        %header
+          %h3 in-between
+        %pre
+          %code#in-between
+            :preserve
+              <span class="param"> @include</span> in-between(<span class="num" contenteditable id="in-between-a">5</span>, <span class="num" contenteditable id="in-between-b">10</span>)
+
+        %ul.in-between
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+
+
+
     %section.no-arguments
       .row
         %header
@@ -309,7 +395,7 @@
             :preserve
               <span class="param"> @include</span> even()
 
-        %ul.pair
+        %ul.even
           %li 1
           %li 2
           %li 3
@@ -329,7 +415,7 @@
             :preserve
               <span class="param"> @include</span> odd()
 
-        %ul.impair
+        %ul.odd
           %li 1
           %li 2
           %li 3
