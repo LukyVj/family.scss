@@ -51,8 +51,8 @@ It's true, I did it for Sass, but some awesome contributors extended it to :
 ### v1.0.3
 
 - `first()` mixin now uses `:first-child` if the given parameter is `1`, closing [#10](https://github.com/LukyVj/family.scss/issues/10)
-- `n-between()` mixin added ( [see](#) ), closing [#35](https://github.com/LukyVj/family.scss/issues/35)
-- `at-least()`, `at-most()` and `in-between()` quantity queries mixins added ( [see](#) ), closing [#24](https://github.com/LukyVj/family.scss/issues/24)
+- `n-between()` mixin added, closing [#35](https://github.com/LukyVj/family.scss/issues/35)
+- `at-least()`, `at-most()` and `in-between()` quantity queries mixins added, closing [#24](https://github.com/LukyVj/family.scss/issues/24)
 - `pair-between()` is now `even
 -between()`, closing [#34](https://github.com/LukyVj/family.scss/issues/34)
 - `impair-between()` is now `odd-between()`, closing [#34](https://github.com/LukyVj/family.scss/issues/34)
