@@ -31,8 +31,9 @@
 <style id='style-after-first'></style>
 <style id='style-from-end'></style>
 <style id='style-between'></style>
-<style id='style-pair-between'></style>
-<style id='style-impair-between'></style>
+<style id='style-even-between'></style>
+<style id='style-odd-between'></style>
+<style id='style-n-between'></style>
 <style id='style-all-but'></style>
 <style id='style-each'></style>
 <style id='style-from-first-last'></style>
@@ -40,7 +41,9 @@
 <style id='style-all-but-first-last'></style>
 <style id='style-first-of'></style>
 <style id='style-last-of'></style>
-<style id='style-n-of'></style>
+<style id='style-at-least'></style>
+<style id='style-at-most'></style>
+<style id='style-in-between'></style>
 <style id='style-child-index'></style>
 <section class='introduction'>
   <p>The goal of this project is to unleash the power of the nth-child property, in an easy way</p>
@@ -182,10 +185,10 @@
       </div>
       <div class='row mixin'>
         <header>
-          <h3>pair-between</h3>
+          <h3>even-between</h3>
         </header>
-        <pre><code id='pair-between'><span class="param">@include</span> pair-between(<span class="num" contenteditable id="pair-between-a">3</span>, <span class="num" contenteditable id="pair-between-b">12</span>)</code></pre>
-        <ul class='pair-between'>
+        <pre><code id='even-between'><span class="param">@include</span> even-between(<span class="num" contenteditable id="even-between-a">3</span>, <span class="num" contenteditable id="even-between-b">12</span>)</code></pre>
+        <ul class='even-between'>
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -205,10 +208,33 @@
       </div>
       <div class='row mixin'>
         <header>
-          <h3>impair-between</h3>
+          <h3>odd-between</h3>
         </header>
-        <pre><code id='impair-between'><span class="param">@include</span> impair-between(<span class="num" contenteditable id="impair-between-a">3</span>, <span class="num" contenteditable id="impair-between-b">13</span>)</code></pre>
-        <ul class='impair-between'>
+        <pre><code id='odd-between'><span class="param">@include</span> odd-between(<span class="num" contenteditable id="odd-between-a">3</span>, <span class="num" contenteditable id="odd-between-b">13</span>)</code></pre>
+        <ul class='odd-between'>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+        </ul>
+      </div>
+      <div class='row mixin'>
+        <header>
+          <h3>n-between</h3>
+        </header>
+        <pre><code id='n-between'><span class="param">@include</span> n-between(<span class="num" contenteditable id="n-between-a">3</span>,<span class="num" contenteditable id="n-between-b">3</span>,<span class="num" contenteditable id="n-between-c">13</span>)&#x000A;<span class="comment"> // This mixin uses 3 arguments, the first one is equal to N item,&#x000A; // the second is the starting item and the thirs the end item.  </span>&#x000A;</code></pre>
+        <ul class='n-between'>
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -322,7 +348,7 @@
     <section class='exact-matching'>
       <div class='row'>
         <header>
-          <h2 class='title'>I/O Mixins</h2>
+          <h2 class='title'>Quantity queries</h2>
         </header>
       </div>
       <div class='row mixin'>
@@ -361,6 +387,55 @@
           <li>10</li>
         </ul>
       </div>
+      <div class='row mixin'>
+        <header>
+          <h3>at-least</h3>
+        </header>
+        <pre><code><span class="param"> @include</span> at-least(<span class="num" contenteditable id="at-least">5</span>)&#x000A;</code></pre>
+        <ul class='at-least'>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+        </ul>
+      </div>
+      <div class='row mixin'>
+        <header>
+          <h3>at-most</h3>
+        </header>
+        <pre><code><span class="param"> @include</span> at-most(<span class="num" contenteditable id="at-most">5</span>)&#x000A;</code></pre>
+        <ul class='at-most'>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+      <div class='row mixin'>
+        <header>
+          <h3>in-between</h3>
+        </header>
+        <pre><code id='in-between'><span class="param"> @include</span> in-between(<span class="num" contenteditable id="in-between-a">5</span>, <span class="num" contenteditable id="in-between-b">10</span>)&#x000A;</code></pre>
+        <ul class='in-between'>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+        </ul>
+      </div>
     </section>
     <section class='no-arguments'>
       <div class='row'>
@@ -373,7 +448,7 @@
           <h3>even</h3>
         </header>
         <pre><code><span class="param"> @include</span> even()&#x000A;</code></pre>
-        <ul class='pair'>
+        <ul class='even'>
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -391,7 +466,7 @@
           <h3>odd</h3>
         </header>
         <pre><code><span class="param"> @include</span> odd()&#x000A;</code></pre>
-        <ul class='impair'>
+        <ul class='odd'>
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -477,7 +552,7 @@
     <div class='code-bloc'>
       <div class='bloc'>
         <div data-language='css' id='sass'>
-          @mixin active {&#x000A;  background: red;&#x000A;  color: #fff;&#x000A;}&#x000A;/*=====================&#x000A;   first(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   last(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include last(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   after-first(5)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include after-first(5){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   from-end(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include from-end(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   between(3, 6)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include between(3, 6){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   pair-between(3, 12)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include pair-between(3, 12){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   impair-between(3, 13)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include impair-between(3, 13){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   all-but(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include all-but(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   each(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include each(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   every(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include every(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   from-first-last(2)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include from-first-last(2){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   middle(11)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include middle(11){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   all-but-first-last(2)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include all-but-first-last(2){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   first-of(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first-of(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   last-of(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include last-of(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   even()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include even(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   odd()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include odd(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   first-last()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first-last(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   unique()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include unique(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   not-unique()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include not-unique(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   child-index(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include child-index(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   child-index(5, backward, 10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include child-index(5, backward, 10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;&#x000A;
+          @mixin active {&#x000A;  background: red;&#x000A;  color: #fff;&#x000A;}&#x000A;/*=====================&#x000A;   first(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   last(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include last(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   after-first(5)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include after-first(5){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   from-end(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include from-end(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   between(3, 6)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include between(3, 6){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   even-between(3, 12)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include even-between(3, 12){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   odd-between(3, 13)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include odd-between(3, 13){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   n-between(3, 10, 20)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include n-between(3, 10, 20){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   all-but(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include all-but(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   each(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include each(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   every(3)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include every(3){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   from-first-last(2)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include from-first-last(2){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   middle(11)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include middle(11){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   all-but-first-last(2)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include all-but-first-last(2){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   first-of(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first-of(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   last-of(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include last-of(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   at-least(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include at-least(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   at-most(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include at-most(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   in-between(5, 10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include in-between(5, 10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   even()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include even(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   odd()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include odd(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   first-last()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include first-last(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   unique()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include unique(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   not-unique()&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include not-unique(){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   child-index(10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include child-index(10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;/*=====================&#x000A;   child-index(5, backward, 10)&#x000A;=====================*/&#x000A;ul li {&#x000A;  @include child-index(5, backward, 10){&#x000A;    @include active;&#x000A;  }&#x000A;}&#x000A;&#x000A;&#x000A;
         </div>
       </div>
       <div class='bloc'>
@@ -493,6 +568,9 @@
       <img alt='' src='images/twitter-icon.svg'>
     </a>
   </div>
+  <p class='version'>
+    Version: <a href="https://github.com/LukyVj/family.scss/releases/">1.0.3</a>
+  </p>
 </section>
 <div class='about-section'>
   <div class='modal-backdrop'></div>
@@ -505,7 +583,8 @@
     <header>
       <h2>About :</h2>
     </header>
-    <p>This project is a small library of Sass mixins, created by @LukyVj on his spare time.</p>
+    <p>This project is a small library of Sass mixins, created by <a href="http://twitter.com/lukyvj">@LukyVj</a> on his spare time.</p>
+    <p>You can find the header pattern generator on <a href="http://codepen.io/LukyVj/pen/xOxYLm">codepen</a></p>
     <header>
       <h2>Thanks to :</h2>
     </header>
@@ -569,7 +648,7 @@
 
 <script>
 
-var familyScss = `@mixin first($num) { &:nth-child(-n + #{$num}) { @content; } } @mixin last($num) { &:nth-last-child(-n + #{$num}) { @content; } } @mixin after-first($num) { &:nth-child(n+#{$num + 1}) { @content } } @mixin from-end($num) { &:nth-last-child(#{$num}) { @content } } @mixin between($first,$last) { &:nth-child(n+#{$first}):nth-child(-n+#{$last}) { @content } } @mixin pair-between($first,$last) { &:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin impair-between($first,$last) { &:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin n-between($num,$first,$last) { &:nth-child(#{$num}n):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin all-but($num) { &:not(:nth-child(#{$num})) { @content } } @mixin each($num) { &:nth-child(#{$num}n) { @content } } @mixin every($num) { @include each($num) { @content } } @mixin from-first-last($num) { &:nth-child(#{$num}), &:nth-last-child(#{$num}) { @content } } @mixin middle($num) { &:nth-child(#{round($num/2)}){ @content } } @mixin all-but-first-last($num) { &:nth-child(n+#{$num}):nth-last-child(n+#{$num}){ @content } } @mixin first-of($limit) { &:nth-last-child(#{$limit}):first-child { @content } } @mixin last-of($limit) { &:nth-of-type(#{$limit}):nth-last-of-type(1){ @content } } @mixin pair() { &:nth-child(even) { @content } } @mixin even(){ @include pair { @content } } @mixin impair() { &:nth-child(odd) { @content } } @mixin odd(){ @include impair { @content } } @mixin first-last() { &:first-child, &:last-child { @content } } @mixin unique() { &:only-child { @content } } @mixin not-unique() { &:not(:only-child) { @content } } @mixin only() { @include unique(){ @content } } @mixin child-index($num, $direction: 'forward', $index: 0) { @for $i from 1 through $num { @if $direction == 'forward' { &:nth-child(#{$i}) { z-index: orderIndex($i, $index, $direction); @content; } } @if $direction == 'backward' { &:nth-last-child(#{$i}) { z-index: orderIndex($i, $index, $direction); @content; } } } } @function orderIndex($i, $index, $direction){ @if $direction == 'forward' { $i:$index + $i; } @else { $i:$index - $i; } @return $i }`;
+var familyScss = `@mixin first($num) { @if $num == 1 { &:first-child { @content; } } @else { &:nth-child(-n + #{$num}) { @content; } } } @mixin last($num) { &:nth-last-child(-n + #{$num}) { @content; } } @mixin after-first($num) { &:nth-child(n+#{$num + 1}) { @content } } @mixin from-end($num) { &:nth-last-child(#{$num}) { @content } } @mixin between($first,$last) { &:nth-child(n+#{$first}):nth-child(-n+#{$last}) { @content } } @mixin even-between($first,$last) { &:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin odd-between($first,$last) { &:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin n-between($num,$first,$last) { &:nth-child(#{$num}n):nth-child(n + #{$first}):nth-child(-n + #{$last}) { @content } } @mixin all-but($num) { &:not(:nth-child(#{$num})) { @content } } @mixin each($num) { &:nth-child(#{$num}n) { @content } } @mixin every($num) { @include each($num) { @content } } @mixin from-first-last($num) { &:nth-child(#{$num}), &:nth-last-child(#{$num}) { @content } } @mixin middle($num) { &:nth-child(#{round($num/2)}){ @content } } @mixin all-but-first-last($num) { &:nth-child(n+#{$num}):nth-last-child(n+#{$num}){ @content } } @mixin first-of($limit) { &:nth-last-child(#{$limit}):first-child { @content } } @mixin last-of($limit) { &:nth-of-type(#{$limit}):nth-last-of-type(1){ @content } } @mixin at-least($num) { $selector: &; $child: nth(nth($selector, -1), -1); &:nth-last-child(n + #{$num}), &:nth-last-child(n + #{$num}) ~ #{$child} { @content; } } @mixin at-most($num) { $selector: &; $child: nth(nth($selector, -1), -1); &:nth-last-child(-n + #{$num}):first-child, &:nth-last-child(-n + #{$num}):first-child ~ #{$child} { @content; } } @mixin in-between($min, $max) { $selector: &; $child: nth(nth($selector, -1), -1); &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child, &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} { @content; } } @mixin even(){ &:nth-child(even) { @content } } @mixin odd(){ &:nth-child(odd) { @content } } @mixin first-last() { &:first-child, &:last-child { @content } } @mixin unique() { &:only-child { @content } } @mixin not-unique() { &:not(:only-child) { @content } } @mixin only() { @include unique(){ @content } } @mixin child-index($num, $direction: 'forward', $index: 0) { @for $i from 1 through $num { @if $direction == 'forward' { &:nth-child(#{$i}) { z-index: orderIndex($i, $index, $direction); @content; } } @if $direction == 'backward' { &:nth-last-child(#{$i}) { z-index: orderIndex($i, $index, $direction); @content; } } } } @function orderIndex($i, $index, $direction){ @if $direction == 'forward' { $i:$index + $i; } @else { $i:$index - $i; } @return $i }`;
 var flask = new CodeFlask;
 flask.run('#sass', {
  language: 'css'
