@@ -163,8 +163,8 @@
   }
 }
 
-/// This quantity-query mixin will only select the last of `$limit` items. It will not
-/// if there is not as much as item as you set in `$limit`.
+/// This quantity-query mixin will select every items if there is at least `$num` items. It will not
+/// if there is not as much as item as you set in `$num`.
 /// @group Quantity queries
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
@@ -177,8 +177,8 @@
     }
 }
 
-/// This quantity-query mixin will only select the last of `$limit` items. It will not
-/// if there is not as much as item as you set in `$limit`.
+/// This quantity-query mixin will select every items if there is at most `$num` items. It will not
+/// if there is not as much as item as you set in `$num`.
 /// @group Quantity queries
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
@@ -191,8 +191,7 @@
     }
 }
 
-/// This quantity-query mixin will only select the last of `$limit` items. It will not
-/// if there is not as much as item as you set in `$limit`.
+/// This quantity-query mixin will select every items only if there is between `$min` and `$max` items.
 /// @group Quantity queries
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
