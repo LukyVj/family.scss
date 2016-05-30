@@ -3,8 +3,15 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 @mixin first($num) {
-  &:nth-child(-n + #{$num}) {
-    @content;
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  }
+  @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
   }
 }
 
