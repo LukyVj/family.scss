@@ -14,13 +14,13 @@
 
 <body class="index">
 
-  <header>
-  <div id='pattern'></div>
+  <header role='banner'>
+  <div aria-hidden id='pattern'></div>
   <section class='hero-container'>
     <h1>Family.scss</h1>
-    <p><strong>Family.scss</strong> is a set of <strong><span id="amount"></span></strong> smart Sass mixins which will help you to manage the style of <code>:nth-child</code>'ified elements, in an easy and classy way.</p>
+    <p><strong>Family.scss</strong> is a set of <strong><span id="amount"></span></strong> smart Sass mixins which will help you to manage the style of <code>:nth-child</code>’ified elements, in an easy and classy way.</p>
     <div class='container-link'>
-      <a class='btn cta w-icon' download='download' href='https://raw.githubusercontent.com/LukyVj/family.scss/master/source/src/family.scss'><svg aria-label="Reset" role="img"><use xlink:href="#icon-download" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Download ( 2kb )</a>
+      <a class='btn cta w-icon' download='download' href='https://raw.githubusercontent.com/LukyVj/family.scss/master/source/src/family.scss'><svg aria-label="Reset" role="img"><use xlink:href="#icon-download" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Download (2kb)</a>
       <a class='btn cta w-icon' href='https://github.com/LukyVj/family.scss'><svg aria-label="Reset" role="img"><use xlink:href="#icon-github" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>  Github</a>
     </div>
     <script async='' id='_carbonads_js' src='//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=lukyvjgithubiofamilyscss' type='text/javascript'></script>
@@ -46,13 +46,13 @@
 <style id='style-in-between'></style>
 <style id='style-child-index'></style>
 <section class='introduction'>
-  <p>The goal of this project is to unleash the power of the nth-child property, in an easy way</p>
-  <p>The better way to understand each and every mixin, is to read it, literally.</p>
-  <p>for example :  first(3) => first three</p>
+  <p>The goal of this project is to unleash the power of the nth-child property, in an easy way.</p>
+  <p>The best way to understand each and every mixin, is to read it, literally.</p>
+  <p>For example: first(3) => first three</p>
 </section>
 <section class='usage'>
   <div class='row'>
-    <p>Each and every mixin is really easy to use, proceed like this :</p>
+    <p>Each and every mixin is really easy to use, proceed like this:</p>
     <span class='code-bloc'>
       <pre class='half'><code>ul li {&#x000A;  <span class="param">background</span>: <span class="value">red</span>;&#x000A;&#x000A; <span class="include"> @include</span> first(<span class="num" contenteditable >3</span>) {&#x000A;  <span class="param">  background</span>: <span class="num">red</span>&#x000A;  }&#x000A;}</code></pre>
       <pre class='half'><code>ul li {&#x000A;  <span class="param">background</span>: <span class="num">red</span>;&#x000A;}&#x000A;&#x000A;ul li:nth-child(-n + <span class="num">3</span>) {&#x000A;  <span class="param">background</span>: <span class="num">red</span>;&#x000A;}</code></pre>
@@ -561,17 +561,17 @@
     </div>
   </div>
 </section>
-<section class='footer-section'>
+<footer class='footer-section' role='contentinfo'>
   <p class='text-center'>Made with &lt;<a href="https://github.com/LukyVj/family.scss">code</a>&gt; by <a href="http://twitter.com/LukyVj">@LukyVj</a> - <a href="#about" data-toggle-modal>About</a></p>
   <div class='share'>
     <a href='https://twitter.com/intent/tweet?text=Family.scss%20-%20A%20set%20of%2020%20Sass%20mixins%20which%20will%20help%20you%20to%20manage%20your%20%3Anth-child%27ified%20elements%20http%3A%2F%2Flukyvj.github.io%2Ffamily.scss%2F%20via%20%40lukyvj'>
-      <img alt='' src='images/twitter-icon.svg'>
+      <img alt='Twitter logo' src='images/twitter-icon.svg'>
     </a>
   </div>
   <p class='version'>
     Version: <a href="https://github.com/LukyVj/family.scss/releases/">1.0.3</a>
   </p>
-</section>
+</footer>
 <div class='about-section'>
   <div class='modal-backdrop'></div>
   <div class='modal' id='about'>
