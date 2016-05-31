@@ -384,7 +384,7 @@ document.getElementById('at-most').addEventListener('keyup', function(){
 function inBetween(numa, numb) {
 	function injectStyle(numa, numb){
 		document.getElementById('style-in-between').innerHTML = `ul.in-between li { ${preStyle} }`;
-		document.getElementById('style-in-between').innerHTML += `.in-between li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child, ul li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child ~ li{
+		document.getElementById('style-in-between').innerHTML += `ul.in-between li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child, ul.in-between li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child ~ li{
 			${selectedStyle}
 		}
 		`
