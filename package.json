@@ -1,6 +1,6 @@
 {
   "name": "family.scss",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "family.scss is a set of Sass mixins which will help you to manage the style of :nth-child'ified elements, in an easy way",
   "main": "index.js",
   "scripts": {
