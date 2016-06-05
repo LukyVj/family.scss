@@ -55,6 +55,13 @@ It's true, I did it for Sass, but some awesome contributors extended it to :
 
 ## Changelogs
 
+### v1.0.5
+
+- `first-child()` mixin added.
+- `last-child()` mixin added.
+- `each-after()` mixin added, closing [#37](https://github.com/LukyVj/family.scss/issues/37)
+- Mention [Holmes.js](https://github.com/Haroenv/holmes) in the about modal.
+
 ### v1.0.3
 
 - `first()` mixin now uses `:first-child` if the given parameter is `1`, closing [#10](https://github.com/LukyVj/family.scss/issues/10)
