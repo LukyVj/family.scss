@@ -221,6 +221,36 @@
 
       %div.row.mixin
         %header
+          %h3 each-after
+        %pre
+          %code#each-after
+            :preserve
+              <span class="param"> @include</span> each-after(<span class="num" contenteditable id="each-after-a">3</span>,<span class="num" contenteditable id="each-after-b">6</span>)
+
+        %ul.each-after
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+          %li 11
+          %li 12
+          %li 13
+          %li 14
+          %li 15
+          %li 16
+          %li 17
+          %li 18
+          %li 19
+          %li 20
+
+      %div.row.mixin
+        %header
           %h3 from-first-last
         %pre
           %code
@@ -387,6 +417,47 @@
       .row
         %header
           %h2.title Without arguments
+      %div.row.mixin
+        %header
+          %h3 last-child
+        %pre
+          %code
+            :preserve
+              <span class="param"> @include</span> first-child()
+
+        %ul.first-child
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+
+      %div.row.mixin
+        %header
+          %h3 last-child
+        %pre
+          %code
+            :preserve
+              <span class="param"> @include</span> last-child()
+
+        %ul.last-child
+          %li 1
+          %li 2
+          %li 3
+          %li 4
+          %li 5
+          %li 6
+          %li 7
+          %li 8
+          %li 9
+          %li 10
+
+
       %div.row.mixin
         %header
           %h3 even

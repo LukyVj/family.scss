@@ -68,6 +68,12 @@
   }
 }
 
+@mixin each-after($num, $offset) {
+  &:nth-child(#{$offset}n) ~ li:nth-child(#{$num}n) {
+    @content
+  }
+}
+
 // Alias of each()
 @mixin every($num) {
   @include each($num) {
@@ -142,6 +148,17 @@
 // without arguments
 //////////////////
 
+@mixin first-child() {
+  &:first-of-type {
+    @content
+  }
+}
+
+@mixin last-child() {
+  &:last-of-type {
+    @content
+  }
+}
 @mixin even(){
   &:nth-child(even) {
     @content

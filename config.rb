@@ -26,7 +26,7 @@ end
 ###
 # Helpers
 ###
-config[:family_lib_version] = '1.0.4'
+config[:family_lib_version] = '1.0.5'
 
 # Methods defined in the helpers block are available in templates
 # helpers do

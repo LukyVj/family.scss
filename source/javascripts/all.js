@@ -209,22 +209,11 @@ window.addEventListener('DOMContentLoaded',function(){
   projectDescriptions = document.querySelectorAll('.mixin'),
   clearButton = document.querySelector('.searchbox #clear');
 
-  search.addEventListener('input',function(){
-    performSearch()
-  });
   clearButton.addEventListener('click', function(){
     clearSearch()
   })
 
-  function performSearch() {
-    for (var i = 0; i < projectNames.length; i++) {
-      if (projectNames[i].innerHTML.toLowerCase().indexOf(search.value.toLowerCase()) === -1 && projectDescriptions[i].innerHTML.toLowerCase().indexOf(search.value.toLowerCase()) === -1) {
-        projectNames[i].parentNode.parentNode.classList.add('hidden');
-      } else {
-        projectNames[i].parentNode.parentNode.classList.remove('hidden');
-      }
-    };
-  }
+
   function clearSearch() {
     for (var i = 0; i < projectNames.length; i++) {
       projectNames[i].parentNode.parentNode.classList.remove('hidden');
