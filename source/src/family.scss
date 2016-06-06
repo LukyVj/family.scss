@@ -103,17 +103,6 @@
   }
 }
 
-/// Select children each `$num`, after `$offset`.
-/// @group with-arguments
-/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
-/// @param {number} $num - id of the child
-/// @param {offset} $offset - number of items before applying
-@mixin each-after($num, $offset) {
-  &:nth-child(#{$offset - $num}n) ~ :nth-child(#{$num}n) {
-    @content;
-  }
-}
-
 /// Select children each `$num`.
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]

@@ -1,5 +1,6 @@
 - version = config[:family_lib_version]
 - num = config[:family_mixins_number]
+- weight = config[:family_file_weight]
 
 %header{ :role => "banner" }
   %div{ :id => "pattern", "aria-hidden" => true }
@@ -8,7 +9,7 @@
     %h1 Family.scss
     %p <strong>Family.scss</strong> is a set of <strong><span id="amount">#{num}</span></strong> smart Sass mixins which will help you to manage the style of <code>:nth-child</code>’ified elements, in an easy and classy way.
     %div.container-link
-      %a{ :href => "https://raw.githubusercontent.com/LukyVj/family.scss/master/source/src/family.scss", :class => "btn cta w-icon", :download => "download"} <svg aria-label="Reset" role="img"><use xlink:href="#icon-download" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Download (4kb)
+      %a{ :href => "https://raw.githubusercontent.com/LukyVj/family.scss/master/source/src/family.scss", :class => "btn cta w-icon", :download => "download"} <svg aria-label="Reset" role="img"><use xlink:href="#icon-download" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Download (#{weight})
       %a{ :href => "https://github.com/LukyVj/family.scss", :class => "btn cta w-icon" } <svg aria-label="Reset" role="img"><use xlink:href="#icon-github" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>  Github
 
     %script#_carbonads_js{ :async => "", :src => "//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=lukyvjgithubiofamilyscss", :type => "text/javascript" }
