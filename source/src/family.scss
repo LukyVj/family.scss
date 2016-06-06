@@ -109,8 +109,8 @@
 /// @param {number} $num - id of the child
 /// @param {offset} $offset - number of items before applying
 @mixin each-after($num, $offset) {
-  &:nth-child(#{$offset}n) ~ li:nth-child(#{$num}n) {
-    @content
+  &:nth-child(#{$offset - $num}n) ~ :nth-child(#{$num}n) {
+    @content;
   }
 }
 

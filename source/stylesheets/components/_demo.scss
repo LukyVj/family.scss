@@ -174,13 +174,13 @@ ul {
     }
   }
 
-  &.each-after {
-    li {
-      @include each-after(3, 6) {
-        @include selected;
-      }
-    }
-  }
+  // &.each-after {
+  //   li {
+  //     @include each-after(3, 6) {
+  //       @include selected;
+  //     }
+  //   }
+  // }
 
   &.from-first-last {
     li {

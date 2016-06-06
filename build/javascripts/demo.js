@@ -234,10 +234,18 @@ document.getElementById('each').addEventListener('keyup', function(){
 function eachAfter(numa, numb) {
 	function injectStyle(numa, numb){
 		document.getElementById('style-each-after').innerHTML = `ul.each-after li { ${preStyle} }`;
-		document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb}n) ~ li:nth-child(${numa}n){
-			${selectedStyle}
-		}
-		`
+		// if (numb < numa ) {
+			document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb - numa}n) ~ :nth-child(${numa}n){
+				${selectedStyle}
+			}
+			`
+		// }
+		//  else {
+		// 	document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb}n) ~ :nth-child(${numa}n){
+		// 		${selectedStyle}
+		// 	}
+		// 	`
+		// }
 	}
 
 	var newStyle = injectStyle(numa, numb);

@@ -1,7 +1,6 @@
 'use strict';
 
 window.onload = function(){
-  getNbSamples()
   childManager()
   childIndex();
   modalizer();
@@ -48,11 +47,6 @@ function mixPattern(num) {
   }
 }
 
-function getNbSamples(){
-  var n = document.getElementById('amount');
-  var ex = document.querySelectorAll('.doc ul').length;
-  n.textContent = ex;
-}
 
 // Generate li incrementer
 function childManager(){

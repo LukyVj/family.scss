@@ -68,11 +68,15 @@
   }
 }
 
-@mixin each-after($num, $offset) {
-  &:nth-child(#{$offset}n) ~ li:nth-child(#{$num}n) {
-    @content
-  }
-}
+// This mixin is commented because of a bug
+// It has been removed for the v1.0.6
+// @mixin each-after($num, $offset) {
+//   @if $num < $offset {
+//     &:nth-child(#{$offset - $num}n) ~ :nth-child(#{$num}n) {
+//       @content;
+//     }
+//   }
+// }
 
 // Alias of each()
 @mixin every($num) {
