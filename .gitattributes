@@ -1,0 +1,9 @@
+build/* linguist-documentation
+source/fonts/* linguist-documentation
+source/images/* linguist-documentation
+source/javascripts/* linguist-documentation
+source/layouts/* linguist-documentation
+source/stylesheets/* linguist-documentation
+Gemfile linguist-vendored
+Gemfile.lock linguist-vendored
+config.rb linguist-vendored
