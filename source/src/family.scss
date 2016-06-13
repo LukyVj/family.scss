@@ -7,8 +7,7 @@
     &:first-child {
       @content;
     }
-  }
-  @else {
+  } @else {
     &:nth-child(-n + #{$num}) {
       @content;
     }
@@ -20,7 +19,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 @mixin last($num) {
-   &:nth-last-child(-n + #{$num}) {
+  &:nth-last-child(-n + #{$num}) {
     @content;
   }
 }
@@ -41,7 +40,7 @@
 /// @param {number} $num - id of the child
 @mixin from-end($num) {
   &:nth-last-child(#{$num}) {
-   @content;
+    @content;
   }
 }
 
@@ -155,7 +154,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin first-of($limit) {
   &:nth-last-child(#{$limit}):first-child {
-   @content;
+    @content;
   }
 }
 
@@ -176,12 +175,13 @@
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin at-least($num) {
-    $selector: &;
-    $child: nth(nth($selector, -1), -1);
-    &:nth-last-child(n + #{$num}),
-    &:nth-last-child(n + #{$num}) ~ #{$child} {
-        @content;
-    }
+  $selector: &;
+  $child: nth(nth($selector, -1), -1);
+
+  &:nth-last-child(n + #{$num}),
+  &:nth-last-child(n + #{$num}) ~ #{$child} {
+    @content;
+  }
 }
 
 /// This quantity-query mixin will select every items if there is at most `$num` items. It will not
@@ -190,12 +190,13 @@
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin at-most($num) {
-    $selector: &;
-    $child: nth(nth($selector, -1), -1);
-    &:nth-last-child(-n + #{$num}):first-child,
-    &:nth-last-child(-n + #{$num}):first-child ~ #{$child} {
-        @content;
-    }
+  $selector: &;
+  $child: nth(nth($selector, -1), -1);
+
+  &:nth-last-child(-n + #{$num}):first-child,
+  &:nth-last-child(-n + #{$num}):first-child ~ #{$child} {
+    @content;
+  }
 }
 
 /// This quantity-query mixin will select every items only if there is between `$min` and `$max` items.
@@ -203,12 +204,13 @@
 /// @param {number} $limit
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin in-between($min, $max) {
-    $selector: &;
-    $child: nth(nth($selector, -1), -1);
-    &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child,
-    &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} {
-      @content;
-    }
+  $selector: &;
+  $child: nth(nth($selector, -1), -1);
+
+  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child,
+  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} {
+    @content;
+  }
 }
 
 /// Select the first exact child
