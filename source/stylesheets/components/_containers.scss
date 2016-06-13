@@ -15,6 +15,11 @@ section {
     position: relative;
     z-index: 10;
 
+    .container-link {
+      width: 100%;
+      clear: both;
+    }
+
 
     @media (max-width: 780px) {
       padding: 2em 2em;

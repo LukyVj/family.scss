@@ -15,6 +15,7 @@ font-weight: 300 !important;
 `;
 
 ///////////////////////////////
+// first
 ///////////////////////////////
 
 function first(num) {
@@ -34,6 +35,7 @@ document.getElementById('first').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// last
 ///////////////////////////////
 
 function last(num) {
@@ -53,6 +55,7 @@ document.getElementById('last').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// afterFirst
 ///////////////////////////////
 
 function afterFirst(num) {
@@ -74,6 +77,7 @@ document.getElementById('after-first').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// fromEnd
 ///////////////////////////////
 
 function fromEnd(num) {
@@ -93,6 +97,7 @@ document.getElementById('from-end').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// between
 ///////////////////////////////
 
 function between(numa, numb) {
@@ -115,12 +120,13 @@ document.getElementById('between').addEventListener('keyup', function(){
 
 
 ///////////////////////////////
+// evenBetween
 ///////////////////////////////
 
-function pairBetween(numa, numb) {
+function evenBetween(numa, numb) {
 	function injectStyle(numa, numb){
-		document.getElementById('style-pair-between').innerHTML = `ul.pair-between li { ${preStyle} }`;
-		document.getElementById('style-pair-between').innerHTML += `.pair-between li:nth-child(even):nth-child(n + ${numa}):nth-child(-n + ${numb}){
+		document.getElementById('style-even-between').innerHTML = `ul.even-between li { ${preStyle} }`;
+		document.getElementById('style-even-between').innerHTML += `.even-between li:nth-child(even):nth-child(n + ${numa}):nth-child(-n + ${numb}){
 			${selectedStyle}
 		}
 		`
@@ -129,19 +135,20 @@ function pairBetween(numa, numb) {
 	var newStyle = injectStyle(numa, numb);
 
 }
-document.getElementById('pair-between').addEventListener('keyup', function(){
-	var vala = document.getElementById('pair-between-a').innerHTML;
-	var valb = document.getElementById('pair-between-b').innerHTML;
-	pairBetween(vala, valb)
+document.getElementById('even-between').addEventListener('keyup', function(){
+	var vala = document.getElementById('even-between-a').innerHTML;
+	var valb = document.getElementById('even-between-b').innerHTML;
+	evenBetween(vala, valb)
 })
 
 ///////////////////////////////
+// oddBetween
 ///////////////////////////////
 
-function impairBetween(numa, numb) {
+function oddBetween(numa, numb) {
 	function injectStyle(numa, numb){
-		document.getElementById('style-impair-between').innerHTML = `ul.impair-between li { ${preStyle} }`;
-		document.getElementById('style-impair-between').innerHTML += `.impair-between li:nth-child(odd):nth-child(n + ${numa}):nth-child(-n + ${numb}){
+		document.getElementById('style-odd-between').innerHTML = `ul.odd-between li { ${preStyle} }`;
+		document.getElementById('style-odd-between').innerHTML += `.odd-between li:nth-child(odd):nth-child(n + ${numa}):nth-child(-n + ${numb}){
 			${selectedStyle}
 		}
 		`
@@ -150,15 +157,38 @@ function impairBetween(numa, numb) {
 	var newStyle = injectStyle(numa, numb);
 
 }
-document.getElementById('impair-between').addEventListener('keyup', function(){
-	var vala = document.getElementById('impair-between-a').innerHTML;
-	var valb = document.getElementById('impair-between-b').innerHTML;
-	var valc = document.getElementById('impair-between-b').innerHTML;
-	impairBetween(vala, valb)
+document.getElementById('odd-between').addEventListener('keyup', function(){
+	var vala = document.getElementById('odd-between-a').innerHTML;
+	var valb = document.getElementById('odd-between-b').innerHTML;
+	oddBetween(vala, valb)
+})
+
+///////////////////////////////
+// nBetween
+///////////////////////////////
+
+function nBetween(numa, numb, numc) {
+	function injectStyle(numa, numb, numc){
+		document.getElementById('style-n-between').innerHTML = `ul.n-between li { ${preStyle} }`;
+		document.getElementById('style-n-between').innerHTML += `.n-between li:nth-child(${numa}n):nth-child(n + ${numb}):nth-child(-n + ${numc}){
+			${selectedStyle}
+		}
+		`
+	}
+
+	var newStyle = injectStyle(numa, numb, numc);
+
+}
+document.getElementById('n-between').addEventListener('keyup', function(){
+	var vala = document.getElementById('n-between-a').innerHTML;
+	var valb = document.getElementById('n-between-b').innerHTML;
+	var valc = document.getElementById('n-between-c').innerHTML;
+	nBetween(vala, valb, valc)
 })
 
 
 ///////////////////////////////
+// allBut
 ///////////////////////////////
 
 function allBut(num) {
@@ -178,6 +208,7 @@ document.getElementById('all-but').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// each
 ///////////////////////////////
 
 function each(num) {
@@ -197,6 +228,38 @@ document.getElementById('each').addEventListener('keyup', function(){
 })
 
 ///////////////////////////////
+// eachAfter
+///////////////////////////////
+
+function eachAfter(numa, numb) {
+	function injectStyle(numa, numb){
+		document.getElementById('style-each-after').innerHTML = `ul.each-after li { ${preStyle} }`;
+		// if (numb < numa ) {
+			document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb - numa}n) ~ :nth-child(${numa}n){
+				${selectedStyle}
+			}
+			`
+		// }
+		//  else {
+		// 	document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb}n) ~ :nth-child(${numa}n){
+		// 		${selectedStyle}
+		// 	}
+		// 	`
+		// }
+	}
+
+	var newStyle = injectStyle(numa, numb);
+
+}
+document.getElementById('each-after').addEventListener('keyup', function(){
+	var vala = document.getElementById('each-after-a').innerHTML;
+	var valb = document.getElementById('each-after-b').innerHTML;
+	eachAfter(vala, valb)
+})
+
+
+///////////////////////////////
+// fromFirstLast
 ///////////////////////////////
 
 function fromFirstLast(num) {
@@ -218,6 +281,7 @@ document.getElementById('from-first-last').addEventListener('keyup', function(){
 
 
 ///////////////////////////////
+// middle
 ///////////////////////////////
 
 function middle(num) {
@@ -238,6 +302,7 @@ document.getElementById('middle').addEventListener('keyup', function(){
 
 
 ///////////////////////////////
+// allButFirstLast
 ///////////////////////////////
 
 function allButFirstLast(num) {
@@ -259,6 +324,7 @@ document.getElementById('all-but-first-last').addEventListener('keyup', function
 
 
 ///////////////////////////////
+// firstOf
 ///////////////////////////////
 
 function firstOf(num) {
@@ -279,6 +345,7 @@ document.getElementById('first-of').addEventListener('keyup', function(){
 
 
 ///////////////////////////////
+// lastOf
 ///////////////////////////////
 
 function lastOf(num) {
@@ -295,4 +362,70 @@ function lastOf(num) {
 }
 document.getElementById('last-of').addEventListener('keyup', function(){
 	lastOf(this.innerHTML)
+})
+
+
+
+///////////////////////////////
+// atLeast
+///////////////////////////////
+
+function atLeast(num) {
+	function injectStyle(num){
+		document.getElementById('style-at-least').innerHTML = `ul.at-least li { ${preStyle} }`;
+		document.getElementById('style-at-least').innerHTML += `.at-least li:nth-last-child(n + ${num}), .at-least li:nth-last-child(n + ${num}) ~ li {
+			${selectedStyle}
+		}
+		`
+	}
+
+	var newStyle = injectStyle(num);
+
+}
+document.getElementById('at-least').addEventListener('keyup', function(){
+	atLeast(this.innerHTML)
+})
+
+
+///////////////////////////////
+// atMost
+///////////////////////////////
+
+function atMost(num) {
+	function injectStyle(num){
+		document.getElementById('style-at-most').innerHTML = `ul.at-most li { ${preStyle} }`;
+		document.getElementById('style-at-most').innerHTML += `.at-most li:nth-last-child(-n + ${num}):first-child, .at-most li:nth-last-child(-n + ${num}):first-child ~ li {
+			${selectedStyle}
+		}
+		`
+	}
+
+	var newStyle = injectStyle(num);
+
+}
+document.getElementById('at-most').addEventListener('keyup', function(){
+	atMost(this.innerHTML)
+})
+
+
+///////////////////////////////
+// inBetween
+///////////////////////////////
+
+function inBetween(numa, numb) {
+	function injectStyle(numa, numb){
+		document.getElementById('style-in-between').innerHTML = `ul.in-between li { ${preStyle} }`;
+		document.getElementById('style-in-between').innerHTML += `ul.in-between li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child, ul.in-between li:nth-last-child(n + ${numa}):nth-last-child(-n + ${numb}):first-child ~ li{
+			${selectedStyle}
+		}
+		`
+	}
+
+	var newStyle = injectStyle(numa, numb);
+
+}
+document.getElementById('in-between').addEventListener('keyup', function(){
+	var vala = document.getElementById('in-between-a').innerHTML;
+	var valb = document.getElementById('in-between-b').innerHTML;
+	inBetween(vala, valb)
 })

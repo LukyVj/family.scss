@@ -1,6 +1,12 @@
-%section.footer-section
-	%p.text-center Made with &lt;<a href="https://github.com/LukyVj/family.scss">code</a>&gt; by <a href="http://twitter.com/LukyVj">@LukyVj</a> - <a href="#about" data-toggle-modal>About</a>
-	-# %p from <span class="icon icon-algolia-light">Algolia</span>
-	.share
-		%a{:href => "https://twitter.com/intent/tweet?text=Family.scss%20-%20A%20set%20of%2020%20Sass%20mixins%20which%20will%20help%20you%20to%20manage%20your%20%3Anth-child%27ified%20elements%20http%3A%2F%2Flukyvj.github.io%2Ffamily.scss%2F%20via%20%40lukyvj"}
-			%img{:alt => "", :src => "images/twitter-icon.svg"}/
+- version = config[:family_lib_version]
+- num = config[:family_mixins_number]
+- weight = config[:family_file_weight]
+
+%footer.footer-section{:role => "contentinfo"}
+  %p.text-center Made with &lt;<a href="https://github.com/LukyVj/family.scss">code</a>&gt; by <a href="http://twitter.com/LukyVj">@LukyVj</a> - <a href="#about" data-toggle-modal>About</a>
+  -# %p from <span class="icon icon-algolia-light">Algolia</span>
+  .share
+    %a{:href => "https://twitter.com/intent/tweet?text=Family.scss%20-%20A%20set%20of%20#{num}%20Sass%20mixins%20which%20will%20help%20you%20to%20manage%20your%20%3Anth-child%27ified%20elements%20http%3A%2F%2Flukyvj.github.io%2Ffamily.scss%2F%20via%20%40lukyvj"}
+      %img{:alt => "Twitter logo", :src => "images/twitter-icon.svg"}/
+  %p.version
+    Version: <a href="https://github.com/LukyVj/family.scss/releases/">#{version}</a>

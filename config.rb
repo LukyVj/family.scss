@@ -23,10 +23,12 @@ configure :development do
   activate :livereload
 end
 
-
 ###
 # Helpers
 ###
+config[:family_lib_version] = '1.0.6'
+config[:family_mixins_number] = '26'
+config[:family_file_weight] = '4Kb'
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -38,7 +40,7 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+   activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript

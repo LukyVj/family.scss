@@ -35,10 +35,6 @@
   &:not(.display) {
     display: none;
   }
-
-  @supports ( backdrop-filter: blur(2px) ) {
-    backdrop-filter: blur(2px);
-  }
 }
 
 

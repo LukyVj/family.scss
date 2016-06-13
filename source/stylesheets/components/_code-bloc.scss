@@ -2,6 +2,18 @@
   max-width: 1400px;
 }
 
+
+
+.switch-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  a {
+    color: #ccc
+  }
+}
+
 .code-bloc {
   border-radius: 4px;
   display: block;
@@ -12,6 +24,8 @@
     margin: 0;
     padding: 0em;
     background: transparent;
+    position: relative;
+
 
     code {
       display: block;
@@ -52,6 +66,7 @@ pre {
   float: left;
   width: 100%;
   border-radius: 4px;
+  position: relative;
 
   .playground &{
     padding: 1em;

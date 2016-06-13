@@ -1,8 +1,17 @@
 // Argument mixin
 //////////////////
 @mixin first($num) {
-  &:nth-child(-n + #{$num}) {
-    @content;
+
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  }
+
+  @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
   }
 }
 
@@ -30,12 +39,12 @@
   }
 }
 
-@mixin pair-between($first,$last) {
+@mixin even-between($first,$last) {
   &:nth-child(even):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
     @content
   }
 }
-@mixin impair-between($first,$last) {
+@mixin odd-between($first,$last) {
   &:nth-child(odd):nth-child(n + #{$first}):nth-child(-n + #{$last}) {
     @content
   }
@@ -58,6 +67,16 @@
     @content
   }
 }
+
+// This mixin is commented because of a bug
+// It has been removed for the v1.0.6
+// @mixin each-after($num, $offset) {
+//   @if $num < $offset {
+//     &:nth-child(#{$offset - $num}n) ~ :nth-child(#{$num}n) {
+//       @content;
+//     }
+//   }
+// }
 
 // Alias of each()
 @mixin every($num) {
@@ -88,7 +107,7 @@
   }
 }
 
-// I/O mixin
+// Quantity Queries
 //////////////////
 
 @mixin first-of($limit) {
@@ -103,29 +122,55 @@
   }
 }
 
+@mixin at-least($num) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-child(n + #{$num}),
+    &:nth-last-child(n + #{$num}) ~ #{$child} {
+        @content;
+    }
+}
+
+@mixin at-most($num) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-child(-n + #{$num}):first-child,
+    &:nth-last-child(-n + #{$num}):first-child ~ #{$child} {
+        @content;
+    }
+}
+
+@mixin in-between($min, $max) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child,
+    &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} {
+      @content;
+    }
+}
+
 // without arguments
 //////////////////
 
-@mixin pair() {
+@mixin first-child() {
+  &:first-of-type {
+    @content
+  }
+}
+
+@mixin last-child() {
+  &:last-of-type {
+    @content
+  }
+}
+@mixin even(){
   &:nth-child(even) {
     @content
   }
 }
-// Alias of pair()
-@mixin even(){
-  @include pair {
-    @content
-  }
-}
 
-@mixin impair() {
-  &:nth-child(odd) {
-    @content
-  }
-}
-// Alias impair()
 @mixin odd(){
-  @include impair {
+  &:nth-child(odd) {
     @content
   }
 }

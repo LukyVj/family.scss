@@ -1,5 +1,5 @@
 %section.search-section
-  %form.searchbox.sbx-custom{:action => "void(0);", :novalidate => "novalidate"}
+  %form.searchbox.sbx-custom{}
     .sbx-custom__wrapper{:role => "search"}
       %input.sbx-custom__input{:autocomplete => "off", :name => "search", :placeholder => "Search in the demo", :required => "required", :type => "search"}/
       %button.sbx-custom__submit{:title => "Submit your search query.", :type => "submit"}
@@ -14,5 +14,5 @@
    document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
      this.parentNode.querySelector('input').focus();
    });
-  
+
   //]]>
