@@ -7,8 +7,7 @@
     &:first-child {
       @content;
     }
-  }
-  @else {
+  } @else {
     &:nth-child(-n + #{$num}) {
       @content;
     }
