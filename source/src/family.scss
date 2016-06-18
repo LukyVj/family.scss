@@ -130,7 +130,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 @mixin middle($num) {
-  &:nth-child(#{round($num / 2)}){
+  &:nth-child(#{round($num / 2)}) {
     @content;
   }
 }
