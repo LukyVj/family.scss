@@ -57,6 +57,15 @@ It's true, I did it for Sass, but some awesome contributors extended it to :
 ## Changelogs
 
 
+### v1.0.8
+- Repository consistency | No changes on the lib.
+
+
+### v1.0.7
+- Repository consistency - No big changes on the lib.
+- The source `family.scss` file is now on `source/src/_family.scss` instead of `source/src/family.scss`
+
+
 ### v1.0.6
 - `each-after()` mixin removed, re-opening [#37](https://github.com/LukyVj/family.scss/issues/37)
 
