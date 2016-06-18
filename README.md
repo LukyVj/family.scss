@@ -3,7 +3,7 @@
 [![Bower version](https://badge.fury.io/bo/family.scss.svg)](https://badge.fury.io/bo/family.scss)
 [![Gitter](https://badges.gitter.im/LukyVj/family.scss.svg)](https://gitter.im/LukyVj/family.scss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](https://travis-ci.org/LukyVj/family.scss.svg?branch=master)](https://travis-ci.org/LukyVj/family.scss)
-#### Version [v1.0.7](https://github.com/LukyVj/family.scss/releases)
+#### Version [v1.0.8](https://github.com/LukyVj/family.scss/releases)
 
 Family.scss is a set of **26** smart Sass mixins which will help you to manage the style of `:nth-child`'ified elements, in an easy and classy way.
 

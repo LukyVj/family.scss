@@ -26,7 +26,7 @@ end
 ###
 # Helpers
 ###
-config[:family_lib_version] = '1.0.7'
+config[:family_lib_version] = '1.0.8'
 config[:family_mixins_number] = '26'
 config[:family_file_weight] = '4Kb'
 
