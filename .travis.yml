@@ -9,7 +9,7 @@ branches:
 install:
   - bundle install
 script:
-  - scss-lint source/src/family.scss
+  - scss-lint source/src/_family.scss
   - middleman build
 after_success:
   - echo "later we'll build the site to github pages at this point"
