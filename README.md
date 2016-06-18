@@ -22,7 +22,7 @@ Website : [http://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.
 Family.scss on [npm](https://www.npmjs.com/package/family.scss)
 
 ## Usage
-First of all, import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/family.scss) into your project.
+First of all, import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/_family.scss) into your project.
 
 Then you can use the mixins right away on your stylesheets.
 
