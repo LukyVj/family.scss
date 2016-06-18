@@ -2,7 +2,7 @@
   "name": "family.scss",
   "version": "1.0.6",
   "description": "family.scss is a set of Sass mixins which will help you to manage the style of :nth-child'ified elements, in an easy way",
-  "main": "index.js",
+  "main": "source/src/_family.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
