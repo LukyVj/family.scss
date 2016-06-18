@@ -1,0 +1,15 @@
+language: ruby
+cache:
+  bundler: true
+rvm:
+  - 2.3.1
+branches:
+  only:
+    - master
+install:
+  - bundle install
+script:
+  - scss-lint source/src/family.scss
+  - middleman build
+after_success:
+  - echo "later we'll build the site to github pages at this point"
