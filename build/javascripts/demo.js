@@ -211,20 +211,31 @@ document.getElementById('all-but').addEventListener('keyup', function(){
 // each
 ///////////////////////////////
 
-function each(num) {
-	function injectStyle(num){
+function each(numa, numb) {
+	function injectStyle(numa, numb){
 		document.getElementById('style-each').innerHTML = `ul.each li { ${preStyle} }`;
-		document.getElementById('style-each').innerHTML += `.each li:nth-child(${num}n){
-			${selectedStyle}
+
+		if (numb == 0) {
+  		document.getElementById('style-each').innerHTML += `.each li:nth-child(${numa}n){
+  			${selectedStyle}
+  		}
+  		`
 		}
-		`
+		else {
+  		document.getElementById('style-each').innerHTML += `.each li:nth-child(${numa}n + ${numb}){
+  			${selectedStyle}
+  		}
+  		`
+		}
 	}
 
-	var newStyle = injectStyle(num);
+	var newStyle = injectStyle(numa, numb);
 
 }
 document.getElementById('each').addEventListener('keyup', function(){
-	each(this.innerHTML)
+	var vala = document.getElementById('each-every').innerHTML;
+	var valb = document.getElementById('each-from').innerHTML;
+	each(vala, valb)
 })
 
 ///////////////////////////////
