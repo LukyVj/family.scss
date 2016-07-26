@@ -98,12 +98,12 @@
 /// @alias every
 @mixin each($num, $from: 0) {
 
-  @if $from != 0 {
-    &:nth-child(#{$num}n + $from) {
+  @if $from == 0 {
+    &:nth-child(#{$num}n) {
       @content;
     }
   } @else {
-    &:nth-child(#{$num}n) {
+    &:nth-child(#{$num}n + #{$from}) {
       @content;
     }
   }
@@ -113,8 +113,8 @@
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
-@mixin every($num) {
-  &:nth-child(#{$num}n) {
+@mixin every($num, $from: 1) {
+  @include each($num, $from) {
     @content;
   }
 }
