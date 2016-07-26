@@ -96,9 +96,16 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
 /// @alias every
-@mixin each($num) {
-  &:nth-child(#{$num}n) {
-    @content;
+@mixin each($num, $from: 0) {
+
+  @if $from != 0 {
+    &:nth-child(#{$num}n + $from) {
+      @content;
+    }
+  } @else {
+    &:nth-child(#{$num}n) {
+      @content;
+    }
   }
 }
 
