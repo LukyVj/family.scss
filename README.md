@@ -21,6 +21,7 @@ Website : [http://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.
 ### Alternative install
 - `$ npm install family.scss`
 - `$ bower install family.scss`
+- `gem install family-rails` ([maintained by pzi](https://github.com/pzi/family-rails))
 
 Family.scss on [npm](https://www.npmjs.com/package/family.scss)
 
