@@ -91,23 +91,29 @@
   }
 }
 
-/// Select children each `$num`.
+/// Select children each `$num` with optional `$offset`.
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @param {number} $num - id of the child
+/// @param {number} $offset - starting point
 /// @alias every
-@mixin each($num) {
-  &:nth-child(#{$num}n) {
-    @content;
+@mixin each($num, $offset: 0) {
+
+  @if $offset == 0 {
+    &:nth-child(#{$num}n) {
+      @content;
+    }
+  } @else {
+    &:nth-child(#{$num}n + #{$offset}) {
+      @content;
+    }
   }
 }
 
-/// Select children each `$num`.
-/// @group with-arguments
-/// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
-/// @param {number} $num - id of the child
-@mixin every($num) {
-  &:nth-child(#{$num}n) {
+/// Alias of each()
+/// $offset - defaults to 1
+@mixin every($num, $offset: 1) {
+  @include each($num, $offset) {
     @content;
   }
 }

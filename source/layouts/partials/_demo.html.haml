@@ -157,7 +157,7 @@
             :preserve
               <span class="param">@include</span> n-between(<span class="num" contenteditable id="n-between-a">3</span>,<span class="num" contenteditable id="n-between-b">3</span>,<span class="num" contenteditable id="n-between-c">13</span>)
               <span class="comment"> // This mixin uses 3 arguments, the first one is equal to N item,
-               // the second is the starting item and the thirs the end item.  </span>
+               // the second is the starting item and the third the end item.  </span>
 
         %ul.n-between
           %li 1
@@ -200,12 +200,14 @@
         %header
           %h3 each
         %pre
-          %code
+          %code#each
             :preserve
-              <span class="param"> @include</span> each(<span class="num" contenteditable id="each">3</span>)
+              <span class="param"> @include</span> each(<span class="num" contenteditable id="each-every">3</span>,<span class="num" contenteditable id="each-from">0</span>)
+              <span class="comment"> // This mixin uses 2 arguments, the first one is equal to N item,
+               // the second is the starting item and can be omitted, the default value is 0.  </span>
 
-              <span class="comment"> // Alias of each()</span>
-              <span class="param"> @include</span> every(<span class="num" contenteditable id="each">3</span>)
+              <span class="param"> @include</span> every(<span class="num">3</span>, <span class="num">1</span>)
+              <span class="comment"> // Alias of each(), but the starting item defaults to 1.</span>
 
         %ul.each
           %li 1
