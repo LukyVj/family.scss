@@ -25,7 +25,7 @@
     "selector"
   ],
   "author": "Lucas Bonomi <@LukyVj> (http://lucasbonomi.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LukyVj/family.scss/issues"
   },
