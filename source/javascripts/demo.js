@@ -1,5 +1,5 @@
 // Dirty implementation of family.scss with Javascript
-// To make the demo playful
+// To make the demo more playfull
 
 
 var selectedStyle = `
@@ -227,35 +227,6 @@ document.getElementById('each').addEventListener('keyup', function(){
 	each(this.innerHTML)
 })
 
-///////////////////////////////
-// eachAfter
-///////////////////////////////
-
-function eachAfter(numa, numb) {
-	function injectStyle(numa, numb){
-		document.getElementById('style-each-after').innerHTML = `ul.each-after li { ${preStyle} }`;
-		// if (numb < numa ) {
-			document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb - numa}n) ~ :nth-child(${numa}n){
-				${selectedStyle}
-			}
-			`
-		// }
-		//  else {
-		// 	document.getElementById('style-each-after').innerHTML += `.each-after li:nth-child(${numb}n) ~ :nth-child(${numa}n){
-		// 		${selectedStyle}
-		// 	}
-		// 	`
-		// }
-	}
-
-	var newStyle = injectStyle(numa, numb);
-
-}
-document.getElementById('each-after').addEventListener('keyup', function(){
-	var vala = document.getElementById('each-after-a').innerHTML;
-	var valb = document.getElementById('each-after-b').innerHTML;
-	eachAfter(vala, valb)
-})
 
 
 ///////////////////////////////
@@ -276,6 +247,7 @@ function fromFirstLast(num) {
 
 }
 document.getElementById('from-first-last').addEventListener('keyup', function(){
+	alert(this)
 	fromFirstLast(this.innerHTML)
 })
 
