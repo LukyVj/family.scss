@@ -32,7 +32,7 @@ function first(num) {
 }
 document.getElementById('first').addEventListener('keyup', function(){
 	first(this.innerHTML)
-})
+});
 
 ///////////////////////////////
 // last
@@ -52,7 +52,7 @@ function last(num) {
 }
 document.getElementById('last').addEventListener('keyup', function(){
 	last(this.innerHTML)
-})
+});
 
 ///////////////////////////////
 // afterFirst
@@ -74,7 +74,7 @@ function afterFirst(num) {
 }
 document.getElementById('after-first').addEventListener('keyup', function(){
 	afterFirst(this.innerHTML)
-})
+});
 
 ///////////////////////////////
 // fromEnd
@@ -94,7 +94,7 @@ function fromEnd(num) {
 }
 document.getElementById('from-end').addEventListener('keyup', function(){
 	fromEnd(this.innerHTML)
-})
+});
 
 ///////////////////////////////
 // between
@@ -116,8 +116,7 @@ document.getElementById('between').addEventListener('keyup', function(){
 	var vala = document.getElementById('between-a').innerHTML;
 	var valb = document.getElementById('between-b').innerHTML;
 	between(vala, valb)
-})
-
+});
 
 ///////////////////////////////
 // evenBetween
@@ -139,7 +138,7 @@ document.getElementById('even-between').addEventListener('keyup', function(){
 	var vala = document.getElementById('even-between-a').innerHTML;
 	var valb = document.getElementById('even-between-b').innerHTML;
 	evenBetween(vala, valb)
-})
+});
 
 ///////////////////////////////
 // oddBetween
@@ -161,7 +160,7 @@ document.getElementById('odd-between').addEventListener('keyup', function(){
 	var vala = document.getElementById('odd-between-a').innerHTML;
 	var valb = document.getElementById('odd-between-b').innerHTML;
 	oddBetween(vala, valb)
-})
+});
 
 ///////////////////////////////
 // nBetween
@@ -184,8 +183,7 @@ document.getElementById('n-between').addEventListener('keyup', function(){
 	var valb = document.getElementById('n-between-b').innerHTML;
 	var valc = document.getElementById('n-between-c').innerHTML;
 	nBetween(vala, valb, valc)
-})
-
+});
 
 ///////////////////////////////
 // allBut
@@ -205,7 +203,7 @@ function allBut(num) {
 }
 document.getElementById('all-but').addEventListener('keyup', function(){
 	allBut(this.innerHTML)
-})
+});
 
 ///////////////////////////////
 // each
@@ -225,9 +223,7 @@ function each(num) {
 }
 document.getElementById('each').addEventListener('keyup', function(){
 	each(this.innerHTML)
-})
-
-
+});
 
 ///////////////////////////////
 // fromFirstLast
@@ -247,10 +243,8 @@ function fromFirstLast(num) {
 
 }
 document.getElementById('from-first-last').addEventListener('keyup', function(){
-	alert(this)
 	fromFirstLast(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // middle
@@ -270,8 +264,7 @@ function middle(num) {
 }
 document.getElementById('middle').addEventListener('keyup', function(){
 	middle(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // allButFirstLast
@@ -292,8 +285,7 @@ function allButFirstLast(num) {
 }
 document.getElementById('all-but-first-last').addEventListener('keyup', function(){
 	allButFirstLast(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // firstOf
@@ -313,8 +305,7 @@ function firstOf(num) {
 }
 document.getElementById('first-of').addEventListener('keyup', function(){
 	firstOf(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // lastOf
@@ -334,9 +325,7 @@ function lastOf(num) {
 }
 document.getElementById('last-of').addEventListener('keyup', function(){
 	lastOf(this.innerHTML)
-})
-
-
+});
 
 ///////////////////////////////
 // atLeast
@@ -356,8 +345,7 @@ function atLeast(num) {
 }
 document.getElementById('at-least').addEventListener('keyup', function(){
 	atLeast(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // atMost
@@ -377,8 +365,7 @@ function atMost(num) {
 }
 document.getElementById('at-most').addEventListener('keyup', function(){
 	atMost(this.innerHTML)
-})
-
+});
 
 ///////////////////////////////
 // inBetween
@@ -400,4 +387,4 @@ document.getElementById('in-between').addEventListener('keyup', function(){
 	var vala = document.getElementById('in-between-a').innerHTML;
 	var valb = document.getElementById('in-between-b').innerHTML;
 	inBetween(vala, valb)
-})
+});
