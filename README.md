@@ -21,12 +21,13 @@ Website : [http://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.
 ### Alternative install
 - `$ npm install family.scss`
 - `$ bower install family.scss`
+- `$ diamond install family.scss`
 - `gem install family-rails` ([maintained by pzi](https://github.com/pzi/family-rails))
 
 Family.scss on [npm](https://www.npmjs.com/package/family.scss)
 
 ## Usage
-First of all, import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/_family.scss) into your project.
+First of all, import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/_family.scss) into your project (`@import '~family.scss';` with diamond).
 
 Then you can use the mixins right away on your stylesheets.
 
