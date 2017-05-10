@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "family.scss": "^1.0.8"
-  },
   "name": "family.scss",
   "version": "1.0.8",
   "description": "family.scss is a set of Sass mixins which will help you to manage the style of :nth-child'ified elements, in an easy way",
