@@ -84,10 +84,20 @@
 /// Select all children but `$num`.
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
-/// @param {number} $num - id of the child
+/// @param {number|string} $num - id of the child, or `first` (alias for `1`), or `last`.
 @mixin all-but($num) {
-  &:not(:nth-child(#{$num})) {
-    @content;
+  @if ($num == 1 or $num == first) {
+    &:not(:first-child) {
+      @content;
+    }
+  } @elseif ($num == last) {
+    &:not(:last-child) {
+      @content;
+    }
+  } @else {
+    &:not(:nth-child(#{$num})) {
+      @content;
+    }
   }
 }
 
