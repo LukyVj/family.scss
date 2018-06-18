@@ -1,5 +1,5 @@
 // Dirty implementation of family.scss with Javascript
-// To make the demo playful
+// To make the demo more playful
 
 
 var selectedStyle = `

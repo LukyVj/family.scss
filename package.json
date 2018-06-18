@@ -22,12 +22,18 @@
     "nth-of-type",
     "nth-of-child",
     "css",
-    "selector"
+    "selector",
+    "eyeglass-module"
   ],
   "author": "Lucas Bonomi <@LukyVj> (http://lucasbonomi.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LukyVj/family.scss/issues"
   },
-  "homepage": "https://github.com/LukyVj/family.scss#readme"
+  "homepage": "https://github.com/LukyVj/family.scss#readme",
+  "eyeglass": {
+    "name": "family",
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
+  }
 }

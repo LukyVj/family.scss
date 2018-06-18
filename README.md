@@ -21,11 +21,16 @@ Website : [http://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.
 ### Alternative install
 - `$ npm install family.scss`
 - `$ bower install family.scss`
+- `gem install family-rails` ([maintained by pzi](https://github.com/pzi/family-rails))
 
 Family.scss on [npm](https://www.npmjs.com/package/family.scss)
 
 ## Usage
-First of all, import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/_family.scss) into your project.
+First of all, you need to import Family.scss into your project. If you're using [eyeglass](http://eyeglass.rocks/) you can import it as such:
+```scss
+@import "family";
+```
+Otherwise import the [Family.scss source file](https://github.com/LukyVj/family.scss/blob/master/source/src/_family.scss).
 
 Then you can use the mixins right away on your stylesheets.
 
