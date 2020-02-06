@@ -46,7 +46,7 @@ ul li {
 ```
 
 Output :
-```sass
+```css
 ul li {
   background: blue;
 }
