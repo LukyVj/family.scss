@@ -60,6 +60,11 @@ ul li:nth-child(-n + 3) {
 It's true, I did it for Sass, but some awesome contributors extended it to :
 - [Stylus](https://github.com/nusususuzu/family.styl)
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/LukyVj/family.scss.svg)](https://starchart.cc/LukyVj/family.scss)
+      
+
 
 ## Changelogs
 
