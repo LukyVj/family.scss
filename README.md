@@ -9,7 +9,7 @@
 
 Family.scss is a set of **26** smart Sass mixins which will help you to manage the style of `:nth-child`'ified elements, in an easy and classy way.
 
-Website : [http://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.scss/)
+Website : [https://lukyvj.github.io/family.scss/](http://lukyvj.github.io/family.scss/)
 
 
 ## Installation
