@@ -259,7 +259,7 @@
   }
 }
 
-/// Will only select the child if it’s unique.
+/// Will only select the child if it is unique.
 /// @group no-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 /// @alias only
@@ -269,7 +269,7 @@
   }
 }
 
-/// Will only select the child if it’s unique.
+/// Will only select the child if it is unique.
 /// @group no-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin only() {
